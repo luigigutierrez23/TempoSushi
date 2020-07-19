@@ -1,0 +1,19 @@
+
+/*=============================================
+JD SLIDER
+=============================================*/
+
+.slide-area li{
+	position: relative;
+}
+
+.slide-text{
+	position: absolute;
+	color:#fff;
+	width:70%;
+	text-align:center;
+	left:50%;
+	transform: translate(-50%, -50%);
+	top:85%;
+	text-shadow:0px 0px 5px black;
+}

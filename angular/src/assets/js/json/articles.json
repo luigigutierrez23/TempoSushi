@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "portada": "assets/img/articulos/portada01.jpg",
+    "titulo": "Lorem Ipsum 1",
+    "url":"lorem-ipsum-1",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae accusamus voluptatum omnis non facere itaque aliquam temporibus, nisi pariatur facilis similique possimus eaque iure doloribus natus animi eos, suscipit eum!",
+    "contenido": "<h2>Lorem ipsum 1</h2><img src=\"../../../assets/img/slide/slide01.jpg\" class=\"py-3 img-fluid\"><div class=\"text-muted\">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quod hic culpa commodi. Repudiandae debitis nisi ab! Numquam accusantium, dolores rerum natus officia, repellendus dolorem nesciunt corporis, dolore debitis esse.Illum modi deserunt fugit quidem saepe dolorum nam cum ipsam sequi pariatur explicabo tempora, quis sint debitis reprehenderit delectus quos, possimus natus nisi aliquam id. Assumenda reiciendis soluta sequi corrupti.</div><br><div class=\"text-muted\">Voluptate ut, cum beatae natus eos quidem blanditiis non temporibus est. Illum numquam rerum eum molestias quae, necessitatibus quis, illo, vitae blanditiis consectetur veniam libero perspiciatis perferendis laborum qui asperiores.</div><br><div class=\"text-muted\">Nulla, unde at hic distinctio quia id! Corporis aspernatur placeat recusandae, dicta in dolores dignissimos tempora explicabo dolore suscipit a quis, iusto nesciunt unde ab animi architecto alias veniam modi.Vero nisi libero corporis quis voluptate quibusdam est sint! Molestias asperiores, vero voluptas illum ducimus repudiandae porro eos odit dolorum culpa at ex quod optio non iure, sint iste? Modi.</div>"
+  },
+  {
+    "id": 2,
+    "portada": "assets/img/articulos/portada02.jpg",
+    "titulo": "Lorem Ipsum 2",
+    "url":"lorem-ipsum-2",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae accusamus voluptatum omnis non facere itaque aliquam temporibus, nisi pariatur facilis similique possimus eaque iure doloribus natus animi eos, suscipit eum!",
+    "contenido": "<h2>Lorem ipsum 2</h2><img src=\"../../../assets/img/slide/slide02.jpg\" class=\"py-3 img-fluid\"><div class=\"text-muted\">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quod hic culpa commodi. Repudiandae debitis nisi ab! Numquam accusantium, dolores rerum natus officia, repellendus dolorem nesciunt corporis, dolore debitis esse.Illum modi deserunt fugit quidem saepe dolorum nam cum ipsam sequi pariatur explicabo tempora, quis sint debitis reprehenderit delectus quos, possimus natus nisi aliquam id. Assumenda reiciendis soluta sequi corrupti.</div><br><div class=\"text-muted\">Voluptate ut, cum beatae natus eos quidem blanditiis non temporibus est. Illum numquam rerum eum molestias quae, necessitatibus quis, illo, vitae blanditiis consectetur veniam libero perspiciatis perferendis laborum qui asperiores.</div><br><div class=\"text-muted\">Nulla, unde at hic distinctio quia id! Corporis aspernatur placeat recusandae, dicta in dolores dignissimos tempora explicabo dolore suscipit a quis, iusto nesciunt unde ab animi architecto alias veniam modi.Vero nisi libero corporis quis voluptate quibusdam est sint! Molestias asperiores, vero voluptas illum ducimus repudiandae porro eos odit dolorum culpa at ex quod optio non iure, sint iste? Modi.</div>"
+  },
+  {
+    "id": 3,
+    "portada": "assets/img/articulos/portada03.jpg",
+    "titulo": "Lorem Ipsum 3",
+    "url":"lorem-ipsum-3",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae accusamus voluptatum omnis non facere itaque aliquam temporibus, nisi pariatur facilis similique possimus eaque iure doloribus natus animi eos, suscipit eum!",
+    "contenido": "<h2>Lorem ipsum 3</h2><img src=\"../../../assets/img/slide/slide03.jpg\" class=\"py-3 img-fluid\"><div class=\"text-muted\">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quod hic culpa commodi. Repudiandae debitis nisi ab! Numquam accusantium, dolores rerum natus officia, repellendus dolorem nesciunt corporis, dolore debitis esse.Illum modi deserunt fugit quidem saepe dolorum nam cum ipsam sequi pariatur explicabo tempora, quis sint debitis reprehenderit delectus quos, possimus natus nisi aliquam id. Assumenda reiciendis soluta sequi corrupti.</div><br><div class=\"text-muted\">Voluptate ut, cum beatae natus eos quidem blanditiis non temporibus est. Illum numquam rerum eum molestias quae, necessitatibus quis, illo, vitae blanditiis consectetur veniam libero perspiciatis perferendis laborum qui asperiores.</div><br><div class=\"text-muted\">Nulla, unde at hic distinctio quia id! Corporis aspernatur placeat recusandae, dicta in dolores dignissimos tempora explicabo dolore suscipit a quis, iusto nesciunt unde ab animi architecto alias veniam modi.Vero nisi libero corporis quis voluptate quibusdam est sint! Molestias asperiores, vero voluptas illum ducimus repudiandae porro eos odit dolorum culpa at ex quod optio non iure, sint iste? Modi.</div>"
+  },
+  {
+    "id": 4,
+    "portada": "assets/img/articulos/portada04.jpg",
+    "titulo": "Lorem Ipsum 4",
+    "url":"lorem-ipsum-4",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae accusamus voluptatum omnis non facere itaque aliquam temporibus, nisi pariatur facilis similique possimus eaque iure doloribus natus animi eos, suscipit eum!",
+    "contenido": "<h2>Lorem ipsum 4</h2><img src=\"../../../assets/img/slide/slide04.jpg\" class=\"py-3 img-fluid\"><div class=\"text-muted\">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quod hic culpa commodi. Repudiandae debitis nisi ab! Numquam accusantium, dolores rerum natus officia, repellendus dolorem nesciunt corporis, dolore debitis esse.Illum modi deserunt fugit quidem saepe dolorum nam cum ipsam sequi pariatur explicabo tempora, quis sint debitis reprehenderit delectus quos, possimus natus nisi aliquam id. Assumenda reiciendis soluta sequi corrupti.</div><br><div class=\"text-muted\">Voluptate ut, cum beatae natus eos quidem blanditiis non temporibus est. Illum numquam rerum eum molestias quae, necessitatibus quis, illo, vitae blanditiis consectetur veniam libero perspiciatis perferendis laborum qui asperiores.</div><br><div class=\"text-muted\">Nulla, unde at hic distinctio quia id! Corporis aspernatur placeat recusandae, dicta in dolores dignissimos tempora explicabo dolore suscipit a quis, iusto nesciunt unde ab animi architecto alias veniam modi.Vero nisi libero corporis quis voluptate quibusdam est sint! Molestias asperiores, vero voluptas illum ducimus repudiandae porro eos odit dolorum culpa at ex quod optio non iure, sint iste? Modi.</div>"
+  }
+]

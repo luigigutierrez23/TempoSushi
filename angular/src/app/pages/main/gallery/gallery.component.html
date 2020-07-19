@@ -1,0 +1,21 @@
+<!--=====================================
+	GALERÍA
+	======================================-->	
+
+	<div class="container-fluid p-0 bg-white" id="galeria">
+
+		<h2 class="text-uppercase py-3 text-muted text-center">Galería de imágenes</h2>
+		
+		<section class="pinterest_grid">
+
+			<article *ngFor="let item of galleryJson; let lastItem = last" class="white-panel"> 
+
+				<a href="{{item.foto}}" data-toggle="lightbox" data-gallery="example-gallery">
+					<img src="{{item.foto}}">
+				</a>
+				{{lastItem ? callback() : "" }}
+			</article>
+
+		</section>
+
+	</div>

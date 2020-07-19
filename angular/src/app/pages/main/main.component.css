@@ -1,0 +1,27 @@
+/*=============================================
+IMG FONDO
+=============================================*/
+#imgFondo{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100vh;
+	z-index:-10;
+	background-image:url(../../../assets/img/slide/slide03.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*=============================================
+SCROLL UP
+=============================================*/
+
+#scrollUp{
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background: url(../../../assets/img/flecha.jpg);
+}

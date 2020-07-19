@@ -1,0 +1,36 @@
+<!--=====================================
+	ARTÍCULOS
+	======================================-->
+
+	<div class="container-fluid p-0" id="articulos">
+		
+		<h2 class="text-uppercase py-5 text-muted text-center bg-white">Artículos</h2>
+
+		<div class="container my-5">
+
+			<!-- Articulos -->
+			
+			<div *ngFor="let item of articlesJson" class="row border my-3 bg-white">
+				
+				<figure class="col-md-5 col-lg-4 col-xl-3 p-2 mb-0">
+					
+					<img src="{{item.portada}}" class="img-fluid">
+
+				</figure>
+
+				<div class="col-md-7 col-lg-8 col-xl-9 p-4">
+					
+					<h2>{{item.titulo}}</h2>
+
+					<p>{{item.intro}}</p>
+
+					<button class="btn btn-dark btn-sm float-right" routerLink="article/{{item.url}}">Leer más</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+

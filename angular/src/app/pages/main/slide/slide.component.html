@@ -1,0 +1,44 @@
+<!--=====================================
+	SLIDESHOW
+	======================================-->	
+
+	<div class="container-fluid p-0 bg-white">
+		
+		<section class="jd-slider slideshow">
+
+			<div class="slide-inner">
+
+				<ul class="slide-area">
+					<li *ngFor="let slide of slideJson; let ultimoIndice = last">
+						<div class="slide-text d-none d-lg-block">
+							<h3>{{slide.titulo}}</h3> 
+							<p>{{slide.descripcion}}</p>
+						</div>
+						<img src="{{slide.imagen}}">
+						{{ultimoIndice ? callback() : "" }}
+					</li>
+				</ul>
+			</div>
+
+			<a class="prev" href="#">
+				<i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+			</a>
+			<a class="next" href="#">
+				<i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+			</a>
+
+			<div class="controller">
+
+				<a href="#" class="auto d-none">
+					
+					<i class="fas fa-play fa-xs"></i>
+					<i class="fas fa-pause fa-xs"></i>
+
+				</a>
+
+				<div class="indicate-area d-none d-lg-block"></div>
+			</div>
+
+		</section>
+
+	</div>

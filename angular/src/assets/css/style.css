@@ -1,0 +1,70 @@
+/*=============================================
+IMG FONDO
+=============================================*/
+#imgFondo{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100vh;
+	z-index:-10;
+	background-image:url(../img/slide/slide03.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*=============================================
+JD SLIDER
+=============================================*/
+
+.slide-area li{
+	position: relative;
+}
+
+.slide-text{
+	position: absolute;
+	color:#fff;
+	width:70%;
+	text-align:center;
+	left:50%;
+	transform: translate(-50%, -50%);
+	top:85%;
+	text-shadow:0px 0px 5px black;
+}
+
+/*=============================================
+SCROLL UP
+=============================================*/
+
+#scrollUp{
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background: url(../img/flecha.jpg);
+
+}
+
+/*=============================================
+ICHECK PERSONALIZADO
+=============================================*/
+
+.terminos{
+	display:none;	
+}
+
+.check{
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background: url(plugins/blue.png);
+	background-position: 0px top;
+	vertical-align:middle;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.terminos:checked + .check{
+	background-position: -20px top;
+}

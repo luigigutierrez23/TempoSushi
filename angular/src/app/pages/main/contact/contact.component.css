@@ -1,0 +1,22 @@
+/*=============================================
+ICHECK PERSONALIZADO
+=============================================*/
+
+.terminos{
+	display:none;	
+}
+
+.check{
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background: url(../../../../assets/css/plugins/blue.png);
+	background-position: 0px top;
+	vertical-align:middle;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.terminos:checked + .check{
+	background-position: -20px top;
+}
