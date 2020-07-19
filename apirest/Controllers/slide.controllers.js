@@ -6,6 +6,7 @@ const Slide = require('../Models/slide.model');
 
 //Sirve para la administración de carpetas y archivos en NodeJS
 const fs = require('fs');
+const path = require('path');
 
 /*---------------------------------------
 Funcion GET
@@ -429,6 +430,34 @@ let eliminarSlide = (req, res) => {
 }
 
 /*---------------------------------------
+Funcion GET para tener acceso de las imagenes
+--------------------------------------*/
+
+let mostrarImg = (req, res) =>{
+
+    let imagen = req.params.imagen;
+    let rutaImagen = `./files/slide/${imagen}`;
+
+    fs.exists(rutaImagen, exists =>{
+
+        if(!exists){
+
+            return res.json({
+
+                status: 400,
+                mensaje:"La imagen no existe"
+
+            })
+
+        }
+
+        res.sendFile(path.resolve(rutaImagen));
+
+    })
+
+}
+
+/*---------------------------------------
 EXPORTAMOS LAS FUNCIONES DEL CONTROLADOR
 --------------------------------------*/
 
@@ -436,5 +465,6 @@ module.exports = {
     mostrarSlide,
     crearSlide,
     editarSlide,
-    eliminarSlide
+    eliminarSlide, 
+    mostrarImg
 }

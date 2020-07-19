@@ -16,14 +16,13 @@ export class SlideshowService {
 
   constructor(private http: HttpClient) { 
     
-    // Ruta.url
-    this.url = "assets/js/json/slide.json";
+    this.url = Ruta.url;
 
   }
 
   getSlide(){
-    //`${this.url}/mostrar-slide`
-    return this.http.get(this.url);
+    
+    return this.http.get(`${this.url}/mostrar-slide`);
 
   }
 

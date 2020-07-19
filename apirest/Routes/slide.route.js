@@ -28,6 +28,8 @@ app.put('/editar-slide/:id', verificarToken, Slide.editarSlide);
 
 app.delete('/eliminar-slide/:id', verificarToken, Slide.eliminarSlide);
 
+app.get('/mostrar-img/:imagen', Slide.mostrarImg);
+
 /*---------------------------------------
 Exportamos la ruta
 --------------------------------------*/

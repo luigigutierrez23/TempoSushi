@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SlideshowService } from '../../../services/slideshow.service';
 
+import { Ruta } from '../../../config';
+
 declare var jQuery:any;
 declare var $:any; 
 
@@ -14,6 +16,7 @@ export class SlideComponent implements OnInit {
   /*---------------   Variables publicas    ----------------*/
   public slideJson:any;
   public renderSlide:boolean = true;
+  public url = Ruta.url;
 
   constructor(private slideService : SlideshowService) { 
 
@@ -24,7 +27,7 @@ export class SlideComponent implements OnInit {
     this.slideService.getSlide()
     .subscribe( result =>{
 
-      this.slideJson = result;
+      this.slideJson = result["data"];
       
     })
 
