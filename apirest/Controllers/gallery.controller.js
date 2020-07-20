@@ -6,6 +6,7 @@ const Galeria = require('../Models/gallery.model');
 
 //Sirve para la administración de carpetas y archivos en NodeJS
 const fs = require('fs');
+const path = require('path');
 
 /*---------------------------------------
 Funcion GET
@@ -418,6 +419,35 @@ let eliminarGaleria = (req, res) => {
 }
 
 /*---------------------------------------
+Funcion GET para tener acceso de las imagenes
+--------------------------------------*/
+
+let mostrarImg = (req, res) =>{
+
+    let imagen = req.params.imagen;
+    console.log(imagen);
+    let rutaImagen = `./files/gallery/${imagen}`;
+
+    fs.exists(rutaImagen, exists =>{
+
+        if(!exists){
+
+            return res.json({
+
+                status: 400,
+                mensaje:"La imagen no existe"
+
+            })
+
+        }
+
+        res.sendFile(path.resolve(rutaImagen));
+
+    })
+
+}
+
+/*---------------------------------------
 EXPORTAMOS LAS FUNCIONES DEL CONTROLADOR
 --------------------------------------*/
 
@@ -425,5 +455,6 @@ module.exports = {
     mostrarGaleria,
     crearGaleria,
     editarGaleria,
-    eliminarGaleria
+    eliminarGaleria,
+    mostrarImg
 }

@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+//Importamos ruta global de la API
+import { Ruta } from '../config';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,13 +14,13 @@ export class GalleryService {
 
   constructor(private http : HttpClient ) {
     
-      this.url = "assets/js/json/gallery.json"
+      this.url = Ruta.url
     
   }
 
   getGallery(){
 
-      return this.http.get(this.url);
+      return this.http.get(`${this.url}/mostrar-galeria`);
 
   }
 

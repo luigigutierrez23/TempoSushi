@@ -8,13 +8,13 @@
 
 		<div class="container my-5">
 
-			<!-- Articulos -->
+			<!-- Articulos --> 
 			
 			<div *ngFor="let item of articlesJson" class="row border my-3 bg-white">
 				
 				<figure class="col-md-5 col-lg-4 col-xl-3 p-2 mb-0">
 					
-					<img src="{{item.portada}}" class="img-fluid">
+					<img src="{{url}}/mostrar-img-articulo/{{item.url}}+{{item.portada}}" class="img-fluid">
 
 				</figure>
 

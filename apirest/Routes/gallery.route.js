@@ -29,6 +29,8 @@ app.put('/editar-galeria/:id', verificarToken, Galeria.editarGaleria);
 
 app.delete('/eliminar-galeria/:id', verificarToken, Galeria.eliminarGaleria);
 
+app.get('/mostrar-img-galeria/:imagen', Galeria.mostrarImg);
+
 /*---------------------------------------
 Exportamos la ruta
 --------------------------------------*/

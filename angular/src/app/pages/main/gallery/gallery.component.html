@@ -10,9 +10,10 @@
 
 			<article *ngFor="let item of galleryJson; let lastItem = last" class="white-panel"> 
 
-				<a href="{{item.foto}}" data-toggle="lightbox" data-gallery="example-gallery">
-					<img src="{{item.foto}}">
+				<a href="{{url}}/mostrar-img-galeria/{{item.foto}}" data-toggle="lightbox" data-gallery="example-gallery">
+					<img src="{{url}}/mostrar-img-galeria/{{item.foto}}">
 				</a>
+				
 				{{lastItem ? callback() : "" }}
 			</article>
 

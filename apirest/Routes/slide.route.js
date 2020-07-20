@@ -14,7 +14,7 @@ const {verificarToken} = require('../middlewares/auth');
 Importamos el controlador
 --------------------------------------*/
 
-const Slide = require('../Controllers/slide.controllers');
+const Slide = require('../Controllers/slide.controller');
 
 /*---------------------------------------
 Creamos las rutas HTTP

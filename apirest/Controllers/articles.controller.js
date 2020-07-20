@@ -6,6 +6,8 @@ const Articulos = require('../Models/articles.model');
 
 //Sirve para la administración de carpetas y archivos en NodeJS
 const fs = require('fs');
+const path  = require('path');
+
 const mkdirp = require('mkdirp');
 const rimraf = require('rimraf');
 
@@ -429,6 +431,34 @@ let eliminarArticulos = (req, res) => {
 }
 
 /*---------------------------------------
+Funcion GET para tener acceso de las imagenes
+--------------------------------------*/
+
+let mostrarImg = (req, res) =>{
+
+    let imagen = req.params.imagen.split('+');
+    let rutaImagen = `./files/articles/${imagen[0]}/${imagen[1]}`;
+
+    fs.exists(rutaImagen, exists =>{
+
+        if(!exists){
+
+            return res.json({
+
+                status: 400,
+                mensaje:"La imagen no existe"
+
+            })
+
+        }
+
+        res.sendFile(path.resolve(rutaImagen));
+
+    })
+
+}
+
+/*---------------------------------------
 EXPORTAMOS LAS FUNCIONES DEL CONTROLADOR
 --------------------------------------*/
 
@@ -436,5 +466,6 @@ module.exports = {
     mostrarArticulos,
     crearArticulos,
     editarArticulos,
-    eliminarArticulos
+    eliminarArticulos,
+    mostrarImg
 }

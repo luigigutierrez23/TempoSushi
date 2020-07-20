@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../../../services/articles.service';
 import { AnonymousSubject } from 'rxjs/internal/Subject';
 
+import { Ruta } from '../../../config';
+
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
@@ -11,6 +13,7 @@ export class ArticlesComponent implements OnInit {
 
   /*---------------   Variables publicas    ----------------*/
   public articlesJson:any;
+  public url = Ruta.url;
 
   constructor(private articlesServices : ArticlesService ) { 
     
@@ -20,7 +23,7 @@ export class ArticlesComponent implements OnInit {
 
       this.articlesServices.getArticles()
       .subscribe( result => {
-          this.articlesJson = result;
+          this.articlesJson = result["data"];
       })
 
   }

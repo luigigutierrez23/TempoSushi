@@ -28,6 +28,8 @@ app.put('/editar-articulos/:id', verificarToken, Articulos.editarArticulos);
 
 app.delete('/eliminar-articulos/:id', verificarToken, Articulos.eliminarArticulos);
 
+app.get('/mostrar-img-articulo/:imagen', Articulos.mostrarImg);
+
 /*---------------------------------------
 Exportamos la ruta
 --------------------------------------*/

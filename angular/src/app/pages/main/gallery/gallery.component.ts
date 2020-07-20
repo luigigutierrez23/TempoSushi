@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryService } from '../../../services/gallery.service';
 
+import { Ruta } from '../../../config';
+
 declare var jQuery:any;
 declare var $:any; 
 
@@ -14,6 +16,7 @@ export class GalleryComponent implements OnInit {
   /*---------------   Variables publicas    ----------------*/
   public galleryJson:any;
   public renderGallery:boolean = true;
+  public url = Ruta.url;
 
   constructor(private galleryService : GalleryService) {
 
@@ -23,7 +26,7 @@ export class GalleryComponent implements OnInit {
       galleryService.getGallery()
       .subscribe( result =>{
 
-        this.galleryJson = result;
+        this.galleryJson = result["data"];
         
       })
 
