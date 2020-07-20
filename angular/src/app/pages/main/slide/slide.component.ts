@@ -26,7 +26,7 @@ export class SlideComponent implements OnInit {
 
     this.slideService.getSlide()
     .subscribe( result =>{
-
+      
       this.slideJson = result["data"];
       
     })
