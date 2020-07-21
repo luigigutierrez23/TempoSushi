@@ -193,7 +193,7 @@ let editarGaleria = (req,res)=>{
                 if(req.files){
 
                     //Obtenemos el archivo
-                    let archivo = req.files.foto;
+                    let archivo = req.files.imagen;
 
                     //Validamos extension del archivo
                     if(archivo.mimetype != 'image/jpeg' && archivo.mimetype != 'image/png'){

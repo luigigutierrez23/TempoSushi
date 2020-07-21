@@ -72,7 +72,7 @@ let crearArticulos = (req,res)=>{
     }
 
     //Obtenemos el archivo
-    let archivo = req.files.portada;
+    let archivo = req.files.imagen;
 
     //Validamos extension del archivo
     if(archivo.mimetype != 'image/jpeg' && archivo.mimetype != 'image/png'){
@@ -203,7 +203,7 @@ let editarArticulos = (req,res)=>{
                 if(req.files){
 
                     //Obtenemos el archivo
-                    let archivo = req.files.portada;
+                    let archivo = req.files.imagen;
 
                     //Validamos extension del archivo
                     if(archivo.mimetype != 'image/jpeg' && archivo.mimetype != 'image/png'){

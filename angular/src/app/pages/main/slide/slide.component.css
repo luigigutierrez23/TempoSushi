@@ -2,7 +2,10 @@
 /*=============================================
 JD SLIDER
 =============================================*/
-
+.slide-inner img{
+	height: 80vh;
+	width: 100%;
+}
 .slide-area li{
 	position: relative;
 }
@@ -10,10 +13,10 @@ JD SLIDER
 .slide-text{
 	position: absolute;
 	color:#fff;
-	width:70%;
+	width:80%;
 	text-align:center;
 	left:50%;
 	transform: translate(-50%, -50%);
-	top:85%;
+	top:50%;
 	text-shadow:0px 0px 5px black;
 }
