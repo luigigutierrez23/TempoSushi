@@ -425,7 +425,7 @@ Funcion GET para tener acceso de las imagenes
 let mostrarImg = (req, res) =>{
 
     let imagen = req.params.imagen;
-    console.log(imagen);
+
     let rutaImagen = `./files/gallery/${imagen}`;
 
     fs.exists(rutaImagen, exists =>{
