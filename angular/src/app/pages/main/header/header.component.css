@@ -1,0 +1,28 @@
+.navbar{ 
+    background:transparent !important;
+    transition: 2s ease;
+    padding: 0px 40px;
+  }
+  ul{
+    background-color: transparent !important;
+  }
+  li .nav-link{
+    color:#daa30ec4 !important;
+    letter-spacing: .1em;
+    font-size: 18px;
+    padding: 20px;
+  }
+  nav ul li .nav-link:hover{
+    color: white !important;
+    transition: 1s ease;
+    transform:translateY(-2px);
+   
+  }
+.header_change{
+    transition: 1s ease;
+    background:  white !important;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75); 
+
+}

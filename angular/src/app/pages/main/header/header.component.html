@@ -4,11 +4,11 @@ HEADER Y NAV
 
 <header class="container-fluid bg-light shadow pb-2" id="inicio">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+  <nav [class.header_change]="header_variable" class="navbar navbar-expand-lg navbar-light bg-light  scrolling-navbar fixed-top">
 
     <a class="navbar-brand text-center" href="#">
       
-      <img src="assets/img/Logo_tempo.jpg" style="width:70px; height:40px;">
+      <img src="assets/img/Logo_tempo.png" style="width:80px; height:65px;">
 
     </a>
 
@@ -31,11 +31,11 @@ HEADER Y NAV
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#mouse">Mouse</a>
+          <a class="nav-link" href="#mouse">Conocenos</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#articulos">Artículos</a>
+          <a class="nav-link" href="#articulos">Menus</a>
         </li>
 
         <li class="nav-item">
