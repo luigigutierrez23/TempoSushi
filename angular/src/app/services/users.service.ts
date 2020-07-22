@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Ruta } from '../config';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +12,31 @@ export class UsersService {
 
   constructor(private http : HttpClient ) {
     
-      this.url = "assets/js/json/users.json"
+      this.url = Ruta.url;
     
   }
 
-  getUsers(){
+  /*---------------------------------------
+  Hacer peticion POST en Angular
+  --------------------------------------*/
 
-      return this.http.get(this.url);
+  guardarUsuario(listaUsuario){
+
+    const headers = new HttpHeaders();
+
+    return this.http.post(`${this.url}/crear-usuario`, listaUsuario, {headers});
+
+  }
+
+  /*---------------------------------------
+  Login Angular y NodeJS
+  --------------------------------------*/
+
+  loginUsuario(listaUsuario){
+
+    const headers = new HttpHeaders();
+
+    return this.http.post(`${this.url}/login-usuario`, listaUsuario, {headers});
 
   }
 

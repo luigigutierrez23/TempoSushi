@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NgForm } from '@angular/forms';
+import { UsersService } from '../../../services/users.service';
+
 declare var jQuery:any;
 declare var $:any;
 
@@ -10,7 +13,21 @@ declare var $:any;
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public listaUsuario:any;
+  public usuarioCreado:any;
+  public creado:boolean = true;
+
+  constructor(private usersService: UsersService) { 
+
+    this.listaUsuario = {
+
+      usuario:null,
+      password:null,
+      email:null
+
+    }
+
+  }
 
   ngOnInit() {
 
@@ -46,6 +63,33 @@ export class ContactComponent implements OnInit {
         radioClass: "iradio_flat-blue"
       })
     
+  }
+
+  /*=============================================
+  Recibir formulario login
+  =============================================*/
+
+  guardarUsuario(f: NgForm){
+
+    this.usersService.guardarUsuario(this.listaUsuario)
+    .subscribe( result =>{
+
+        this.usuarioCreado = result;
+
+        if(this.usuarioCreado["status"] == 200){
+
+          $(".flagUser").removeClass("d-none");
+          $(".flagUser").addClass("d-block");
+          $(".flagUser").html(this.usuarioCreado["mensaje"]);
+
+        }else{
+
+            this.usuarioCreado = false;
+            $(".flagUserError").html(this.usuarioCreado["mensaje"]);
+        }
+      
+    })
+
   }
 
 }

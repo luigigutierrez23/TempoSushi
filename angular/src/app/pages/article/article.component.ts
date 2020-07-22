@@ -26,6 +26,8 @@ export class ArticleComponent implements OnInit {
   public usersJson:any;
   public renderUser:any;
   public validarLogin:boolean = true;
+  public listaUsuario:any;
+  public mensajeLogin:string;
 
   constructor(activatedRoute : ActivatedRoute , 
               private articulosService: ArticlesService,
@@ -37,7 +39,7 @@ export class ArticleComponent implements OnInit {
 
           this.articlesJson = result;
 
-          this.renderArticle = this.articlesJson.find( res => {
+          this.renderArticle = this.articlesJson["data"].find( res => {
 
               return res.url == activatedRoute.snapshot.params["id"];
 
@@ -47,6 +49,14 @@ export class ArticleComponent implements OnInit {
 
       })
 
+      /*---------------------------------------
+      Objeto listaUsuario
+      --------------------------------------*/
+
+      this.listaUsuario ={
+          user:null,
+          password:null
+      }
    }
 
   ngOnInit() {
@@ -54,29 +64,17 @@ export class ArticleComponent implements OnInit {
 
   onSubmit(f: NgForm){
 
-    this.usersService.getUsers()
+    this.usersService.loginUsuario(this.listaUsuario)
     .subscribe( result =>{
-
+      console.log("Here");
+      
       this.usersJson = result;
-
-      this.renderUser = this.usersJson.find( res => {
-
-          if(res.usuario == this.user && res.password == this.password){
-            return true;
-          }else{
-            return false;
-          }
-
-      });
-
-      if(this.renderUser){
-
-          this.login = true;
-
+      console.log(this.usersJson["mensaje"]);
+      if(this.usersJson["mensaje"] == "ok"){
+        this.validarLogin = true;
       }else{
-
-          this.validarLogin = false;
-
+        this.mensajeLogin = this.usersJson["mensaje"];
+        this.validarLogin = false;
       }
 
     })
