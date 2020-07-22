@@ -83,7 +83,7 @@ let crearUsuario = (req, res) =>{
 
             return res.json({
                 status:400,
-                mensaje:"Error al guardar el usuario",
+                mensaje: err.message,
                 err
             });
 
@@ -110,8 +110,7 @@ let loginUsuario = (req, res) =>{
     let body = req.body;
 
     //Recorremos la BD en busqueda de coincidencia con el usuario
-    User.findOne({usuario:body.usuario}, (err,data)=>{
-
+    User.findOne({usuario:body.user}, (err,data)=>{
         if(err){
             return res.json({
                 status:500,

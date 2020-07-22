@@ -46,7 +46,7 @@ export class ArticleComponent implements OnInit {
           });
 
           this.contenidoArticle = this.renderArticle.contenido;
-
+        
       })
 
       /*---------------------------------------
@@ -66,12 +66,11 @@ export class ArticleComponent implements OnInit {
 
     this.usersService.loginUsuario(this.listaUsuario)
     .subscribe( result =>{
-      console.log("Here");
       
       this.usersJson = result;
-      console.log(this.usersJson["mensaje"]);
+
       if(this.usersJson["mensaje"] == "ok"){
-        this.validarLogin = true;
+        this.login = true;
       }else{
         this.mensajeLogin = this.usersJson["mensaje"];
         this.validarLogin = false;

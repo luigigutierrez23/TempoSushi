@@ -116,8 +116,8 @@
 					</label>
 				</div>
 
-				<div *ngIf="!creado" class="alert alert-danger flagUserError"></div>
-				<div *ngIf="creado" class="alert alert-success d-none flagUser"></div>
+				<div *ngIf="errorCreado" class="alert alert-danger">{{mensajeApi}}</div>
+				<div *ngIf="creado" class="alert alert-success">{{mensajeApi}}</div>
 
 				<button type="submit" class="btn btn-primary btn-block">Enviar</button>
 

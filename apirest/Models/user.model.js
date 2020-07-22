@@ -4,6 +4,9 @@ REQUERIMIENTOS
 
 const mongoose = require('mongoose');
 
+//Requerimos el modulo para validaciones unicas
+const uniqueValidator = require('mongoose-unique-validator');
+
 /*---------------------------------------
 ESQUEMA PARA EL MODELO CONECTOR A MONGODB
 --------------------------------------*/
@@ -41,6 +44,12 @@ userSchema.methods.toJSON = function(){
     return userObject;
 
 }
+
+/*---------------------------------------
+Devolver mensaje personalizado para validaciones unicas
+--------------------------------------*/
+
+userSchema.plugin(uniqueValidator, {message: 'El {PATH} ya está registrado en la base de datos '})
 
 /*---------------------------------------
 Exportamos el modelo
