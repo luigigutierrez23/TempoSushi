@@ -15,7 +15,9 @@ export class ContactComponent implements OnInit {
 
   public listaUsuario:any;
   public usuarioCreado:any;
-  public creado:boolean = true;
+  public creado:boolean = false;
+  public errorCreado:boolean = false;
+  public mensajeApi:string;
 
   constructor(private usersService: UsersService) { 
 
@@ -78,14 +80,16 @@ export class ContactComponent implements OnInit {
 
         if(this.usuarioCreado["status"] == 200){
 
-          $(".flagUser").removeClass("d-none");
-          $(".flagUser").addClass("d-block");
-          $(".flagUser").html(this.usuarioCreado["mensaje"]);
+          this.creado = true;
+          this.errorCreado = false;
+          this.mensajeApi = this.usuarioCreado["mensaje"];
 
         }else{
 
-            this.usuarioCreado = false;
-            $(".flagUserError").html(this.usuarioCreado["mensaje"]);
+            this.errorCreado = true;
+            this.creado = false;
+            this.mensajeApi = this.usuarioCreado["mensaje"];
+        
         }
       
     })
