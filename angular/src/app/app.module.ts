@@ -23,10 +23,7 @@ import { MainComponent } from './pages/main/main.component';
 import { HeaderComponent } from './pages/main/header/header.component';
 import { SlideComponent } from './pages/main/slide/slide.component';
 import { GalleryComponent } from './pages/main/gallery/gallery.component';
-import { MouseComponent } from './pages/main/mouse/mouse.component';
-import { ArticlesComponent } from './pages/main/articles/articles.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
-import { ArticleComponent } from './pages/article/article.component';
 
 //Los decoradores son funciones que modifican clases de Javascript
 
@@ -39,11 +36,8 @@ import { ArticleComponent } from './pages/article/article.component';
     HeaderComponent,
     SlideComponent,
     GalleryComponent,
-    MouseComponent,
-    ArticlesComponent,
     ContactComponent,
-    MainComponent,
-    ArticleComponent
+    MainComponent
   ],
 
   //Importamos otros modulos cuyas clases exportadas sean necesarias para las plantillas de componentes declaradas en este modulo.

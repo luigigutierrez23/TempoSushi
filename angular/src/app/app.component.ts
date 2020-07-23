@@ -1,9 +1,6 @@
 //Importamos la clase Component para recopilar metadatos de configuracion de componentes
 import { Component, OnInit } from '@angular/core';
 
-declare var jQuery:any;
-declare var $:any; 
-
 //Decorador de la clase Componente
 @Component({
   //El selector es la etiqueta personalizada que nos permite crear Angular en el HTML y donde se nos va a visualizar este componente.
