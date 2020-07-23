@@ -8,7 +8,7 @@ import { Ruta } from '../config';
   providedIn: 'root'
 })
 
-export class GalleryService {
+export class ProductsService {
 
   public url : string;
 
@@ -18,7 +18,7 @@ export class GalleryService {
     
   }
 
-  getGallery(){
+  getProducts(){
 
       return this.http.get(`${this.url}/mostrar-productos`);
 

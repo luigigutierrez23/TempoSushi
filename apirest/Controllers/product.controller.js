@@ -2,7 +2,7 @@
 Importamos el modelo
 --------------------------------------*/
 
-const Galeria = require('../Models/gallery.model');
+const Product = require('../Models/product.model');
 
 //Sirve para la administración de carpetas y archivos en NodeJS
 const fs = require('fs');
@@ -12,11 +12,11 @@ const path = require('path');
 Funcion GET
 --------------------------------------*/
 
-let mostrarGaleria = (req,res)=>{
+let mostrarProduct = (req,res)=>{
 
     //https://mongoosejs.com/docs/api.html#model_Model.find
 
-    Galeria.find({})
+    Product.find({})
     .exec((err, data)=>{
         
         if (err) {
@@ -27,7 +27,7 @@ let mostrarGaleria = (req,res)=>{
         }
 
         //Contar la cantidad de registros
-        Galeria.countDocuments({}, (err, total)=>{
+        Product.countDocuments({}, (err, total)=>{
 
             if (err) {
                 return res.json({
@@ -54,7 +54,7 @@ let mostrarGaleria = (req,res)=>{
 Funcion POST
 --------------------------------------*/
 
-let crearGaleria = (req,res)=>{
+let crearProduct = (req,res)=>{
 
     //Obtenemos los datos del formulario
     let body = req.body;
@@ -69,7 +69,7 @@ let crearGaleria = (req,res)=>{
     }
 
     //Obtenemos el archivo
-    let archivo = req.files.foto;
+    let archivo = req.files.image;
 
     //Validamos extension del archivo
     if(archivo.mimetype != 'image/jpeg' && archivo.mimetype != 'image/png'){
@@ -98,7 +98,7 @@ let crearGaleria = (req,res)=>{
     let extension = archivo.name.split('.').pop();
 
     //Movemos el archivo a la carpeta
-    archivo.mv(`./files/gallery/${nombre}.${extension}`, err =>{
+    archivo.mv(`./files/products/${nombre}.${extension}`, err =>{
 
         if(err){
 
@@ -110,21 +110,26 @@ let crearGaleria = (req,res)=>{
 
 
         //Obtenemos los datos del formulario para pasarlos al modelo
-        let galeria = new Galeria({
+        let product = new Product({
 
-            foto: `${nombre}.${extension}`
+            image: `${nombre}.${extension}`,
+            title: body.title,
+            description:body.description,
+            price: body.price
+
         });
+
 
         //Guardamos en MongoDB
         //https://mongoosejs.com/docs/api.html#model_Model-save
 
-        galeria.save((err,data)=>{
+        product.save((err,data)=>{
 
             if(err){
 
                 return res.json({
                     status:400,
-                    mensaje:"Error al guardar la foto",
+                    mensaje:"Error al guardar el producto",
                     err
                 });
 
@@ -134,14 +139,13 @@ let crearGaleria = (req,res)=>{
 
                 status:200,
                 data,
-                mensaje:"La Foto ha sido creado con exito"
+                mensaje:"El producto ha sido creado con exito"
 
             })
             
         })
 
     })
-    return;
    
 }
  
@@ -150,9 +154,9 @@ let crearGaleria = (req,res)=>{
 Funcion PUT
 --------------------------------------*/
 
-let editarGaleria = (req,res)=>{
+let editarProduct = (req,res)=>{
 
-    //Capturamos el id del Galeria a actualizar
+    //Capturamos el id del Product a actualizar
     let id = req.params.id;
 
     //Obtenemos el cuerpo del formulario
@@ -162,9 +166,9 @@ let editarGaleria = (req,res)=>{
     Tasks
     --------------------------------------*/
 
-    /*---------------   Validamos que la Galeria exista    ----------------*/
+    /*---------------   Validamos que la Product exista    ----------------*/
 
-    Galeria.findById(id, (err,data) =>{
+    Product.findById(id, (err,data) =>{
 
         if(err){
             return res.json({
@@ -173,7 +177,7 @@ let editarGaleria = (req,res)=>{
             });
         }
 
-        //Validamos que la Galeria exista
+        //Validamos que la Product exista
 
         if(!data){
             return res.json({
@@ -182,7 +186,7 @@ let editarGaleria = (req,res)=>{
             });
         }
 
-        let rutaImagen = data.foto;
+        let rutaImagen = data.image;
 
         /*---------------   Validamos cambio de imagen    ----------------*/
 
@@ -193,7 +197,7 @@ let editarGaleria = (req,res)=>{
                 if(req.files){
 
                     //Obtenemos el archivo
-                    let archivo = req.files.imagen;
+                    let archivo = req.files.image;
 
                     //Validamos extension del archivo
                     if(archivo.mimetype != 'image/jpeg' && archivo.mimetype != 'image/png'){
@@ -234,7 +238,7 @@ let editarGaleria = (req,res)=>{
                     let extension = archivo.name.split('.').pop();
 
                     //Movemos el archivo a la carpeta
-                    archivo.mv(`./files/gallery/${nombre}.${extension}`, err =>{
+                    archivo.mv(`./files/products/${nombre}.${extension}`, err =>{
 
                         if(err){
 
@@ -253,9 +257,9 @@ let editarGaleria = (req,res)=>{
                         }
 
                         //Eliminar archivo anterior
-                        if(fs.existsSync(`./files/gallery/${rutaImagen}`)){
+                        if(fs.existsSync(`./files/products/${rutaImagen}`)){
                             
-                            fs.unlinkSync(`./files/gallery/${rutaImagen}`);
+                            fs.unlinkSync(`./files/products/${rutaImagen}`);
 
                         }
                         
@@ -283,13 +287,18 @@ let editarGaleria = (req,res)=>{
 
             return new Promise((resolve, reject)=>{
 
-                let datosGaleria = {
-                    foto: rutaImagen
+                let datosProduct = {
+
+                    image: rutaImagen,
+                    title: body.title,
+                    description: body.description,
+                    price: body.price
+
                 }
         
                 //Actualizamos en MongoDB
                 //https://mongoosejs.com/docs/api.html#model_Model.findByIdAnUpdate
-                Galeria.findByIdAndUpdate(id, datosGaleria, {new:true, runValidators:true}, (err,data)=>{
+                Product.findByIdAndUpdate(id, datosProduct, {new:true, runValidators:true}, (err,data)=>{
         
                     if(err){
 
@@ -360,15 +369,15 @@ let editarGaleria = (req,res)=>{
 Funcion DELETE
 --------------------------------------*/
 
-let eliminarGaleria = (req, res) => {
+let eliminarProduct = (req, res) => {
 
-    //Capturamos el id del Galeria a actualizar
+    //Capturamos el id del Product a actualizar
     let id = req.params.id;
 
     //Obtenemos el cuerpo del formulario
     let body = req.body;
 
-    Galeria.findById(id, (err,data) =>{
+    Product.findById(id, (err,data) =>{
 
         if(err){
             return res.json({
@@ -377,38 +386,38 @@ let eliminarGaleria = (req, res) => {
             });
         }
 
-        //Validamos que el Galeria exista
+        //Validamos que el Product exista
 
         if(!data){
             return res.json({
                 status:400,
-                mensaje:"La foto no existe en la Base de Datos"
+                mensaje:"El producto no existe en la Base de Datos"
             });
         }
 
         //Eliminar archivo anterior
-        if(fs.existsSync(`./files/gallery/${data.foto}`)){
+        if(fs.existsSync(`./files/products/${data.image}`)){
                             
-            fs.unlinkSync(`./files/gallery/${data.foto}`);
+            fs.unlinkSync(`./files/products/${data.image}`);
 
         }
 
         //Eliminar registro en MongoDB
         //https://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove
 
-        Galeria.findByIdAndRemove(id , (err, data) =>{
+        Product.findByIdAndRemove(id , (err, data) =>{
 
             if(err){
                 return res.json({
                     status:500,
-                    mensaje:"Error al eliminar la foto de la galería"
+                    mensaje:"Error al eliminar el producto"
                 });
             }
 
             res.json({
 
                 status:200,
-                mensaje:"La foto de la galería ha sido eliminada correctamente"
+                mensaje:"El producto ha sido eliminado correctamente"
 
             })
 
@@ -426,7 +435,7 @@ let mostrarImg = (req, res) =>{
 
     let imagen = req.params.imagen;
 
-    let rutaImagen = `./files/gallery/${imagen}`;
+    let rutaImagen = `./files/products/${imagen}`;
 
     fs.exists(rutaImagen, exists =>{
 
@@ -452,9 +461,9 @@ EXPORTAMOS LAS FUNCIONES DEL CONTROLADOR
 --------------------------------------*/
 
 module.exports = {
-    mostrarGaleria,
-    crearGaleria,
-    editarGaleria,
-    eliminarGaleria,
+    mostrarProduct,
+    crearProduct,
+    editarProduct,
+    eliminarProduct,
     mostrarImg
 }

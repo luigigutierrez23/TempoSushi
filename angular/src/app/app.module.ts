@@ -23,6 +23,7 @@ import { MainComponent } from './pages/main/main.component';
 import { HeaderComponent } from './pages/main/header/header.component';
 import { SlideComponent } from './pages/main/slide/slide.component';
 import { GalleryComponent } from './pages/main/gallery/gallery.component';
+import { ProductsComponent } from './pages/main/products/products.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
 
 //Los decoradores son funciones que modifican clases de Javascript
@@ -36,6 +37,7 @@ import { ContactComponent } from './pages/main/contact/contact.component';
     HeaderComponent,
     SlideComponent,
     GalleryComponent,
+    ProductsComponent,
     ContactComponent,
     MainComponent
   ],

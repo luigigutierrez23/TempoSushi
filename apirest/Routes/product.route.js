@@ -15,21 +15,21 @@ const {verificarToken} = require('../middlewares/auth');
 Importamos el controlador
 --------------------------------------*/
 
-const Galeria = require('../Controllers/gallery.controller');
+const Producto = require('../Controllers/product.controller');
 
 /*---------------------------------------
 Creamos las rutas HTTP
 --------------------------------------*/
 
-app.get('/mostrar-galeria', Galeria.mostrarGaleria);
+app.get('/mostrar-productos', Producto.mostrarProduct);
 
-app.post('/crear-galeria', verificarToken, Galeria.crearGaleria);
+app.post('/crear-producto', verificarToken, Producto.crearProduct);
 
-app.put('/editar-galeria/:id', verificarToken, Galeria.editarGaleria);
+app.put('/editar-producto/:id', verificarToken, Producto.editarProduct);
 
-app.delete('/eliminar-galeria/:id', verificarToken, Galeria.eliminarGaleria);
+app.delete('/eliminar-producto/:id', verificarToken, Producto.eliminarProduct);
 
-app.get('/mostrar-img-galeria/:imagen', Galeria.mostrarImg);
+app.get('/mostrar-img-producto/:imagen', Producto.mostrarImg);
 
 /*---------------------------------------
 Exportamos la ruta
