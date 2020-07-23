@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GalleryService } from '../../../services/gallery.service';
 
 import { Ruta } from '../../../config';
@@ -17,6 +17,7 @@ export class GalleryComponent implements OnInit {
   public galleryJson:any;
   public renderGallery:boolean = true;
   public url = Ruta.url;
+  @Input() filterBy?: string ='';
 
   constructor(private galleryService : GalleryService) {
 

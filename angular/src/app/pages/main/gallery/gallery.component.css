@@ -1,0 +1,18 @@
+.container-menu{
+    text-align: center;
+}
+
+ul{
+    display: inline-block;
+    text-align: center;
+    padding: 20px 20px;
+}
+ li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+li a{
+   color: #daa40eea;
+}
