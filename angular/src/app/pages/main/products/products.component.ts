@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 
 import { Ruta } from '../../../config';
+import { Mixitup } from 'mixitup';
 
 declare var jQuery:any;
 declare var $:any; 
@@ -27,7 +28,6 @@ export class ProductsComponent implements OnInit {
       productsService.getProducts()
       .subscribe( result =>{
         this.productsJson = result["data"];
-        
       })
 
    }
@@ -48,9 +48,10 @@ export class ProductsComponent implements OnInit {
         $('.pinterest_grid').pinterest_grid({
           no_columns: 4, //Número de columnas
           padding_x: 10, //Márgenes internas horizontal
-          padding_y: 10, //Márgenes internas vertical
+          padding_y: 20, //Márgenes internas vertical
           margin_bottom: 50, //Márgen externa inferor
-          single_column_breakpoint: 769 //Punto de quiebre para una sola columna
+
+          single_column_breakpoint: 776 //Punto de quiebre para una sola columna
         });
 
      
