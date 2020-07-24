@@ -20,23 +20,11 @@ export class UsersService {
   Hacer peticion POST en Angular
   --------------------------------------*/
 
-  guardarUsuario(listaUsuario){
+  sendEmail(listaUsuario){
 
     const headers = new HttpHeaders();
 
     return this.http.post(`${this.url}/crear-usuario`, listaUsuario, {headers});
-
-  }
-
-  /*---------------------------------------
-  Login Angular y NodeJS
-  --------------------------------------*/
-
-  loginUsuario(listaUsuario){
-
-    const headers = new HttpHeaders();
-
-    return this.http.post(`${this.url}/login-usuario`, listaUsuario, {headers});
 
   }
 

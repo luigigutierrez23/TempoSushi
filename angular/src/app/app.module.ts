@@ -22,7 +22,6 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 import { HeaderComponent } from './pages/main/header/header.component';
 import { SlideComponent } from './pages/main/slide/slide.component';
-import { GalleryComponent } from './pages/main/gallery/gallery.component';
 import { ProductsComponent } from './pages/main/products/products.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
 
@@ -36,7 +35,6 @@ import { ContactComponent } from './pages/main/contact/contact.component';
     AppComponent,
     HeaderComponent,
     SlideComponent,
-    GalleryComponent,
     ProductsComponent,
     ContactComponent,
     MainComponent

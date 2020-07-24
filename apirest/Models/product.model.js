@@ -22,6 +22,10 @@ let productSchema = new  Schema({
         type:String,
         required: [true, "La introduccion es obligatoria"]
     },
+    category:{
+        type:String,
+        required: [true, "La introduccion es obligatoria"]
+    },
     price:{
         type:Number,
         required: [true, "La url es obligatoria"]

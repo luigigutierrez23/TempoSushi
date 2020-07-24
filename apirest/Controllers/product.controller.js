@@ -115,6 +115,7 @@ let crearProduct = (req,res)=>{
             image: `${nombre}.${extension}`,
             title: body.title,
             description:body.description,
+            category:body.category,
             price: body.price
 
         });
@@ -292,6 +293,7 @@ let editarProduct = (req,res)=>{
                     image: rutaImagen,
                     title: body.title,
                     description: body.description,
+                    category:body.category,
                     price: body.price
 
                 }

@@ -13,7 +13,7 @@ declare var $:any;
 })
 export class ContactComponent implements OnInit {
 
-  public listaUsuario:any;
+  public customer:any;
   public usuarioCreado:any;
   public creado:boolean = false;
   public errorCreado:boolean = false;
@@ -21,11 +21,11 @@ export class ContactComponent implements OnInit {
 
   constructor(private usersService: UsersService) { 
 
-    this.listaUsuario = {
+    this.customer = {
 
-      usuario:null,
-      password:null,
-      email:null
+      name:null,
+      email:null,
+      message:null
 
     }
 
@@ -71,28 +71,30 @@ export class ContactComponent implements OnInit {
   Recibir formulario login
   =============================================*/
 
-  guardarUsuario(f: NgForm){
+  sendEmail(f: NgForm){
 
-    this.usersService.guardarUsuario(this.listaUsuario)
-    .subscribe( result =>{
+    console.log(this.customer);
 
-        this.usuarioCreado = result;
+    // this.usersService.sendEmail(this.customer)
+    // .subscribe( result =>{
 
-        if(this.usuarioCreado["status"] == 200){
+    //     this.usuarioCreado = result;
 
-          this.creado = true;
-          this.errorCreado = false;
-          this.mensajeApi = this.usuarioCreado["mensaje"];
+    //     if(this.usuarioCreado["status"] == 200){
 
-        }else{
+    //       this.creado = true;
+    //       this.errorCreado = false;
+    //       this.mensajeApi = this.usuarioCreado["mensaje"];
 
-            this.errorCreado = true;
-            this.creado = false;
-            this.mensajeApi = this.usuarioCreado["mensaje"];
+    //     }else{
+
+    //         this.errorCreado = true;
+    //         this.creado = false;
+    //         this.mensajeApi = this.usuarioCreado["mensaje"];
         
-        }
+    //     }
       
-    })
+    // })
 
   }
 

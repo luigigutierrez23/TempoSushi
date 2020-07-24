@@ -8,28 +8,17 @@
 
 		<div class="container">
 			
-			<form class="bg-light p-4 needs-validation" (ngSubmit)="guardarUsuario(f)" #f="ngForm" novalidate>
+			<form class="bg-light p-4 needs-validation" (ngSubmit)="sendEmail(f)" #f="ngForm" novalidate>
 				
 				<h4 class="bg-dark text-white text-center p-2">Ingrese los datos</h4>
 				
 				<div class="form-group">
 					
-					<label for="usuario">Ingrese su usuario</label>
+					<label for="usuario">Ingrese su nombre</label>
 
-					<input type="text" id="usuario" name="usuario" class="form-control" placeholder="Escriba su usuario con mínimo 2 caracteres, máximo 6 caracteres sin usar números" minlength="2" maxlength="6" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="listaUsuario.usuario"  required>
+					<input type="text" id="usuario" name="name" class="form-control" placeholder="Escriba su usuario con mínimo 2 caracteres, máximo 6 caracteres sin usar números" minlength="2" maxlength="6" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name"  required>
 
 				  	<div class="valid-feedback">Valid.</div>
-    				<div class="invalid-feedback">Please fill out this field.</div>
-
-				</div>
-
-				<div class="form-group">
-					
-					<label for="password">Ingrese su contraseña</label>
-
-					<input type="password" id="password" name="password" class="form-control" placeholder="Escriba su contraseña con mínimo 8 caracteres y debe incluir letras en mayúscula, en minúscula y números" minlength="8" [(ngModel)] ="listaUsuario.password" required>
-
-					<div class="valid-feedback">Valid.</div>
     				<div class="invalid-feedback">Please fill out this field.</div>
 
 				</div>
@@ -38,7 +27,7 @@
 
 					<label for="email">Ingrese su correo electrónico:</label>
 
-					<input type="email" id="email" class="form-control"  placeholder="Escriba su correo" name="email" [(ngModel)] ="listaUsuario.email" required>
+					<input type="email" id="email" class="form-control"  placeholder="Escriba su correo" name="email" [(ngModel)] ="customer.email" required>
 
 					<div class="valid-feedback">Valid.</div>
     				<div class="invalid-feedback">Please fill out this field.</div>
@@ -46,20 +35,13 @@
 				</div>
 
 				<div class="form-group">
-			  		<label for="mensajes">Mensaje:</label>
-			  		<textarea class="form-control" rows="5" id="mensajes" required></textarea>
+					  <label for="mensajes">Mensaje:</label>
+					  
+					  <textarea class="form-control" rows="5" id="mensajes" name="message" [(ngModel)]="customer.message" required></textarea>
+					  
 			  		<div class="valid-feedback">Valid.</div>
     				<div class="invalid-feedback">Please fill out this field.</div>
 			  	</div>
-
-			  	<div class="form-group form-check">
-					<label class="form-check-label">
-						<input class="form-check-input terminos" type="checkbox" required>
-							<span class="check"></span>Acepto términos y condiciones.
-						<div class="valid-feedback">Valid.</div>
-    					<div class="invalid-feedback">Please fill out this field.</div>
-					</label>
-				</div>
 
 				<div *ngIf="errorCreado" class="alert alert-danger">{{mensajeApi}}</div>
 				<div *ngIf="creado" class="alert alert-success">{{mensajeApi}}</div>
