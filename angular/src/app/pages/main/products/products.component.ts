@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 
 import { Ruta } from '../../../config';
@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   public productsJson:any;
   public renderProducts:boolean = true;
   public url = Ruta.url;
-  @Input() filterBy?: string ='';
+
 
   constructor(private productsService : ProductsService) {
 
@@ -26,7 +26,6 @@ export class ProductsComponent implements OnInit {
       --------------------------------------*/
       productsService.getProducts()
       .subscribe( result =>{
-
         this.productsJson = result["data"];
         
       })
@@ -53,6 +52,8 @@ export class ProductsComponent implements OnInit {
           margin_bottom: 50, //Márgen externa inferor
           single_column_breakpoint: 769 //Punto de quiebre para una sola columna
         });
+
+     
 
         /*=============================================
         EKKO LIGHTBOX

@@ -35,9 +35,10 @@ import { ContactComponent } from './pages/main/contact/contact.component';
     AppComponent,
     HeaderComponent,
     SlideComponent,
-    ProductsComponent,
+    ProductsComponent, 
     ContactComponent,
     MainComponent
+   
   ],
 
   //Importamos otros modulos cuyas clases exportadas sean necesarias para las plantillas de componentes declaradas en este modulo.

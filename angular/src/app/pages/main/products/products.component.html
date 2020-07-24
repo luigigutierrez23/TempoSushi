@@ -2,44 +2,82 @@
 	PRODUCTOS
 	======================================-->	
 
-	<div class="container-fluid p-0 bg-white" id="galeria">
+	<div class="container-fluid p-0 bg-white" id="products">
 
 		<h2 class="text-uppercase py-3 text-muted text-center">Nuestros Productos</h2>
 			<div class="container-menu">
+
 				<ul class="">
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"><img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> Promociones</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="Promociones">
+						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> Promociones</a>
 					</li>
 
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"><img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br> Temakis</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="">
+						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br> Temakis</a>
 					</li>
 
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"><img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>  Entradas</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="">
+						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>  Entradas</a>
 					</li>
 
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"> <img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>Rolls</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="Rolls"> 
+						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>Rolls</a>
 					</li>
 					
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"><img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>Bebidas</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="">
+						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>Bebidas</a>
 					</li>
 
-					<li class="nav-item"><a class="nav-link d-none d-lg-block" [routerLinkActive]="['active']" [class.active]="filterBy==''" (click)="filterBy=''"><img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br> Sushi Salads</a>
+					<li class="nav-item">
+						<a class="nav-link d-none d-lg-block" data-filter="">
+						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br> Sushi Salads</a>
 					</li>
 
 				</ul>
 			</div>
 		
 		
-		<section class="pinterest_grid">
+		<section class="pinterest_grid container-separator">
 
-			<article *ngFor="let item of productsJson; let lastItem = last" class="white-panel"> 
+			<div class="card" data-target="blog-item" style="width:400px" *ngFor="let item of    productsJson; let lastItem = last" class="white-panel">
 
 				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox" data-gallery="example-gallery">
-					<img src="{{url}}/mostrar-img-producto/{{item.image}}">
+					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
 				</a>
-				
+
+				<div class="card-body">
+				  <h4 class="card-title">{{item.title}}</h4>
+				  <textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
+				  <p>Precio   <strong>{{item.price}}</strong></p>
+				  <a href="#" class="btn btn-warning">Pedir ahora</a>
+
+				</div>
+					
 				{{lastItem ? callback() : "" }}
-			</article>
+			  </div>
 
 		</section>
 
 	</div>
+
+	<script>
+
+		/*=============================================
+        Mixitup
+        =============================================*/
+
+        var mixer = mixitup(containerEl, {
+            selectors: {
+                target: '.blog-item'
+            },
+            animation: {
+                duration: 300
+            }
+        });
+
+	</script>

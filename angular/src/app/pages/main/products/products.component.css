@@ -15,4 +15,15 @@ ul{
 
 li a{
    color: #daa40eea;
+   transition: .2s all;
+}
+li img:hover{
+transform: scaleX(-3px);
+transition: .2s all;
+}
+
+/*SECTION CARDS PRODUCTS*/
+
+.container-separator{
+    padding: 20px 0px;
 }
