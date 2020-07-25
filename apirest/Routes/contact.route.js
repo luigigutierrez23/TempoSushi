@@ -4,22 +4,15 @@ REQUERIMIENTOS
 const express = require('express');
 const app = express();
 
-
 /*---------------------------------------
 Importamos el controlador
 --------------------------------------*/
-
-const User = require('../Controllers/user.controller');
+const Contact = require('../Controllers/contact.controller');
 
 /*---------------------------------------
 Creamos las rutas HTTP
 --------------------------------------*/
-
-app.get('/mostrar-usuarios', User.mostrarUsuarios);
-
-app.post('/crear-usuario', User.crearUsuario);
-
-app.post('/login-usuario', User.loginUsuario);
+app.post('/send-email', Contact.sendEmail);
 
 /*---------------------------------------
 Exportamos la ruta

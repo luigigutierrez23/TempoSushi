@@ -20,6 +20,7 @@
     "mongoose": "^5.9.24",
     "mongoose-unique-validator": "^2.0.3",
     "ms": "^2.1.2",
+    "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
     "nopt": "^1.0.10",
     "normalize-path": "^3.0.0",
