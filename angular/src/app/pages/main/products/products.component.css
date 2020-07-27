@@ -9,7 +9,6 @@ ul{
 }
  li {
     display: inline-block;
-    cursor: pointer;
     padding: 0 20px;
 }
 
