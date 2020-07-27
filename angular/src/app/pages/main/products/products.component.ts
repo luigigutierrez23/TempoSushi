@@ -1,8 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 
 import { Ruta } from '../../../config';
-import { Mixitup } from 'mixitup';
 
 declare var jQuery:any;
 declare var $:any; 
@@ -19,6 +18,7 @@ export class ProductsComponent implements OnInit {
   public renderProducts:boolean = true;
   public url = Ruta.url;
 
+  @Input() filterBy?: string ='all';
 
   constructor(private productsService : ProductsService) {
 
@@ -33,6 +33,7 @@ export class ProductsComponent implements OnInit {
    }
 
   ngOnInit() {
+    
   }
 
   callback(){
@@ -46,10 +47,12 @@ export class ProductsComponent implements OnInit {
         =============================================*/
 
         $('.pinterest_grid').pinterest_grid({
-          no_columns: 4, //Número de columnas
-          padding_x: 10, //Márgenes internas horizontal
+          no_columns: 3, //Número de columnas
+          padding_x: 15, //Márgenes internas horizontal
           padding_y: 20, //Márgenes internas vertical
           margin_bottom: 50, //Márgen externa inferor
+          
+  
 
           single_column_breakpoint: 776 //Punto de quiebre para una sola columna
         });

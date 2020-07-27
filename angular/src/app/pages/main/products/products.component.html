@@ -8,59 +8,61 @@
 			<div class="container-menu">
 
 				<ul class="">
-
-					<li>
+					
+					<li class="btn" [class.active]="filterBy=='all'" (click)="filterBy='all'">
 						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="all">Todos</span>
+						<span>Todos</span>
 					</li>
+				
+					
 
-					<li>
+					<li class="btn" [class.active]="filterBy=='Promociones'" (click)="filterBy='Promociones'">
 						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> 
-						<span class="filter" data-filter="promociones">Promociones</span>
+						<span>Promociones</span>
 					</li>
 
-					<li>
+					<li class="btn" class="btn" [class.active]="filterBy=='Temakis'" (click)="filterBy='Temakis'">
 						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="temakis">Temakis</span>
+						<span >Temakis</span>
 					</li>
 
-					<li>
+					<li class="btn"  [class.active]="filterBy=='Entradas'" (click)="filterBy='Entradas'">
 						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="entradas">Entradas</span>
+						<span>Entradas</span>
 					</li>
 
-					<li>
+					<li class="btn" [class.active]="filterBy=='Rolls'" (click)="filterBy='Rolls'">
 						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="rolls">Rolls</span>
+						<span>Rolls</span>
 					</li>
 					
-					<li>
+					<li class="btn"  [class.active]="filterBy=='Bebidas'" (click)="filterBy='Bebidas'">
 						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="bebidas">Bebidas</span>
+						<span>Bebidas</span>
 					</li>
 
-					<li>
+					<li class="btn" [class.active]="filterBy=='Sushi salad'" (click)="filterBy='Sushi salad'">
 						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br>
-						<span class="filter" data-filter="sushi-salad">Sushi Salads</span>
+						<span>Sushi salads</span>
 					</li>
 
 				</ul>
 			</div>
 		
 		
-		<div class="pinterest_grid container-separator" data-ref="mixitup-container">		
-
+		<div class="pinterest_grid" *ngFor="let item of (productsJson | ProductsFilter: filterBy)">		
+				
 			<div *ngFor="let item of productsJson; let lastItem = last"  class="card-item white-panel item  {{item.category}}" style="width:400px">
 
-				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox" data-gallery="gallery">
+				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox"   data-gallery="gallery">
 					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
 				</a>
 
 				<div class="card-body">
-				<h4 class="card-title">{{item.title}}</h4>
-				<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
-				<p>Precio   <strong>{{item.price}}</strong></p>
-				<a href="#" class="btn btn-warning">Pedir ahora</a>
+					<h4 class="card-title">{{item.title}}</h4>
+					<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
+					<p>Precio   <strong>{{item.price}}</strong></p>
+					<a href="#" class="btn btn-warning">Pedir ahora</a>
 
 				</div>
 					
@@ -71,7 +73,7 @@
 		</div>
 
 	</div>
-
+<!-- 
 	<script>
 
 		/*=============================================
@@ -85,4 +87,4 @@
 			}
 		});
 
-	</script>
+	</script> -->

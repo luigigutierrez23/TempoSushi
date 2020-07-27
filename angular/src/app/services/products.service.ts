@@ -11,6 +11,8 @@ import { Ruta } from '../config';
 export class ProductsService {
 
   public url : string;
+ 
+
 
   constructor(private http : HttpClient ) {
     
@@ -18,10 +20,12 @@ export class ProductsService {
     
   }
 
+
   getProducts(){
 
       return this.http.get(`${this.url}/mostrar-productos`);
 
   }
+  
 
 }

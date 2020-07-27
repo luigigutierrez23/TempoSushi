@@ -23,6 +23,7 @@ import { MainComponent } from './pages/main/main.component';
 import { HeaderComponent } from './pages/main/header/header.component';
 import { SlideComponent } from './pages/main/slide/slide.component';
 import { ProductsComponent } from './pages/main/products/products.component';
+import {  FilterPipe } from './pages/main/products/pipes/filter.pipe';
 import { ContactComponent } from './pages/main/contact/contact.component';
 
 //Los decoradores son funciones que modifican clases de Javascript
@@ -37,6 +38,7 @@ import { ContactComponent } from './pages/main/contact/contact.component';
     SlideComponent,
     ProductsComponent, 
     ContactComponent,
+    FilterPipe,
     MainComponent
    
   ],
@@ -52,7 +54,9 @@ import { ContactComponent } from './pages/main/contact/contact.component';
   ],
 
   //Los proveedores son los creadores de servicios que este modulo contribuye a la recoleccion global de servicios; se vuelven accesibles en todas las partes de la aplicacion. Esto lo habilitamos cuando invocamos servicios de una base de datos.
-  providers: [],
+  providers: [
+    FilterPipe
+  ],
 
   //
   bootstrap: [AppComponent]
