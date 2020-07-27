@@ -1,7 +1,6 @@
 /*---------------------------------------
 REQUERIMIENTOS
 --------------------------------------*/
-
 const mongoose = require('mongoose');
 
 /*---------------------------------------
@@ -9,27 +8,19 @@ ESQUEMA PARA EL MODELO CONECTOR A MONGODB
 --------------------------------------*/
 
 let Schema = mongoose.Schema;
-let articleSchema = new  Schema({
+let contactSchema = new  Schema({
 
-    portada:{
+    name:{
         type:String,
-        required: [true, "La imagen es obligatoria"]
+        required: [true, "La nombre es obligatoria"]
     },
-    titulo:{
+    email:{
         type:String,
-        required: [true, "El titulo es obligatoria"]
+        required: [true, "El email es obligatoria"]
     },
-    intro:{
+    message:{
         type:String,
-        required: [true, "La introduccion es obligatoria"]
-    },
-    url:{
-        type:String,
-        required: [true, "La url es obligatoria"]
-    },
-    contenido:{
-        type:String,
-        required: [true, "El contenido es obligatoria"]
+        required: [true, "El mensaje es obligatoria"]
     }
 
 });
@@ -38,4 +29,4 @@ let articleSchema = new  Schema({
 Exportamos el modelo
 --------------------------------------*/
 
-module.exports = mongoose.model("articles", articleSchema);
+module.exports = mongoose.model("customers", contactSchema);

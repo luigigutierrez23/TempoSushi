@@ -2,66 +2,73 @@
 	PRODUCTOS
 	======================================-->	
 
-	<div class="container-fluid p-0 bg-white" id="products">
+	<div class="container-fluid p-0 bg-white products" id="products">
 
 		<h2 class="text-uppercase py-3 text-muted text-center">Nuestros Productos</h2>
 			<div class="container-menu">
 
 				<ul class="">
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="Promociones">
-						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> Promociones</a>
+
+					<li>
+						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="all">Todos</span>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="">
-						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br> Temakis</a>
+					<li>
+						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> 
+						<span class="filter" data-filter="promociones">Promociones</span>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="">
-						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>  Entradas</a>
+					<li>
+						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="temakis">Temakis</span>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="Rolls"> 
-						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>Rolls</a>
+					<li>
+						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="entradas">Entradas</span>
+					</li>
+
+					<li>
+						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="rolls">Rolls</span>
 					</li>
 					
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="">
-						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>Bebidas</a>
+					<li>
+						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="bebidas">Bebidas</span>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link d-none d-lg-block" data-filter="">
-						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br> Sushi Salads</a>
+					<li>
+						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br>
+						<span class="filter" data-filter="sushi-salad">Sushi Salads</span>
 					</li>
 
 				</ul>
 			</div>
 		
 		
-		<section class="pinterest_grid container-separator">
+		<div class="pinterest_grid container-separator" data-ref="mixitup-container">		
 
-			<div class="card" data-target="blog-item" style="width:400px" *ngFor="let item of    productsJson; let lastItem = last" class="white-panel">
+			<div *ngFor="let item of productsJson; let lastItem = last"  class="card-item white-panel item  {{item.category}}" style="width:400px">
 
-				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox" data-gallery="example-gallery">
+				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox" data-gallery="gallery">
 					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
 				</a>
 
 				<div class="card-body">
-				  <h4 class="card-title">{{item.title}}</h4>
-				  <textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
-				  <p>Precio   <strong>{{item.price}}</strong></p>
-				  <a href="#" class="btn btn-warning">Pedir ahora</a>
+				<h4 class="card-title">{{item.title}}</h4>
+				<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
+				<p>Precio   <strong>{{item.price}}</strong></p>
+				<a href="#" class="btn btn-warning">Pedir ahora</a>
 
 				</div>
 					
 				{{lastItem ? callback() : "" }}
-			  </div>
 
-		</section>
+			</div>
+
+		</div>
 
 	</div>
 
@@ -70,14 +77,12 @@
 		/*=============================================
         Mixitup
         =============================================*/
-
-        var mixer = mixitup(containerEl, {
-            selectors: {
-                target: '.blog-item'
-            },
-            animation: {
-                duration: 300
-            }
-        });
+		var containerEl = document.querySelector('[data-ref="mixitup-container"]');
+		console.log(containerEl);
+		var mixer = mixitup('.container', {
+			selectors: {
+				target: '.item'
+			}
+		});
 
 	</script>

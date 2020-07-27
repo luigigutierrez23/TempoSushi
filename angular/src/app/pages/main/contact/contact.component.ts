@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ContactService } from '../../../services/contact.service';
+import Swal from 'sweetalert2';
+
 import { NgForm } from '@angular/forms';
-import { UsersService } from '../../../services/users.service';
 
 declare var jQuery:any;
 declare var $:any;
@@ -19,7 +21,7 @@ export class ContactComponent implements OnInit {
   public errorCreado:boolean = false;
   public mensajeApi:string;
 
-  constructor(private usersService: UsersService) { 
+  constructor(private contactService : ContactService) { 
 
     this.customer = {
 
@@ -73,28 +75,17 @@ export class ContactComponent implements OnInit {
 
   sendEmail(f: NgForm){
 
-    console.log(this.customer);
+    this.contactService.sendEmail(this.customer)
+    .subscribe( result => {
 
-    // this.usersService.sendEmail(this.customer)
-    // .subscribe( result =>{
+       if(result["status"] ==200){
 
-    //     this.usuarioCreado = result;
+          Swal.fire('Excelente...', '¡Mensaje enviado correctamente!', 'success');
+       }else{
+          Swal.fire('Oops...', '¡Algo salió mal!', 'error');
+       }
 
-    //     if(this.usuarioCreado["status"] == 200){
-
-    //       this.creado = true;
-    //       this.errorCreado = false;
-    //       this.mensajeApi = this.usuarioCreado["mensaje"];
-
-    //     }else{
-
-    //         this.errorCreado = true;
-    //         this.creado = false;
-    //         this.mensajeApi = this.usuarioCreado["mensaje"];
-        
-    //     }
-      
-    // })
+    });
 
   }
 
