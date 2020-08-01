@@ -13,46 +13,44 @@
 						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br>
 						<span>Todos</span>
 					</li>
-				
-					
 
-					<li class="btn" [class.active]="filterBy=='Promociones'" (click)="filterBy='Promociones'">
+					<li class="btn" [class.active]="filterBy=='promociones'" (click)="filterBy='promociones'">
 						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> 
 						<span>Promociones</span>
 					</li>
 
-					<li class="btn" class="btn" [class.active]="filterBy=='Temakis'" (click)="filterBy='Temakis'">
+					<li class="btn" class="btn" [class.active]="filterBy=='temakis'" (click)="filterBy='temakis'">
 						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br>
 						<span >Temakis</span>
 					</li>
 
-					<li class="btn"  [class.active]="filterBy=='Entradas'" (click)="filterBy='Entradas'">
+					<li class="btn"  [class.active]="filterBy=='entradas'" (click)="filterBy='entradas'">
 						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>
 						<span>Entradas</span>
 					</li>
 
-					<li class="btn" [class.active]="filterBy=='Rolls'" (click)="filterBy='Rolls'">
+					<li class="btn" [class.active]="filterBy=='rolls'" (click)="filterBy='rolls'">
 						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>
 						<span>Rolls</span>
 					</li>
 					
-					<li class="btn"  [class.active]="filterBy=='Bebidas'" (click)="filterBy='Bebidas'">
+					<li class="btn"  [class.active]="filterBy=='bebidas'" (click)="filterBy='bebidas'">
 						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>
 						<span>Bebidas</span>
 					</li>
 
-					<li class="btn" [class.active]="filterBy=='Sushi salad'" (click)="filterBy='Sushi salad'">
+					<li class="btn" [class.active]="filterBy=='sushi-salad'" (click)="filterBy='sushi-salad'">
 						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br>
 						<span>Sushi salads</span>
 					</li>
 
 				</ul>
 			</div>
-		
-		
-		<div class="pinterest_grid" *ngFor="let item of (productsJson | ProductsFilter: filterBy)">		
 				
-			<div *ngFor="let item of productsJson; let lastItem = last"  class="card-item white-panel item  {{item.category}}" style="width:400px">
+		
+		<div class="pinterest_grid">		
+				
+			<div *ngFor="let item of productsJson  | ProductsFilter: filterBy ; let lastItem = last"  class="card-item white-panel item  {{item.category}}" style="width:400px">
 
 				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox"   data-gallery="gallery">
 					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">

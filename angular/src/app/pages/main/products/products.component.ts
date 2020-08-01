@@ -47,13 +47,11 @@ export class ProductsComponent implements OnInit {
         =============================================*/
 
         $('.pinterest_grid').pinterest_grid({
-          no_columns: 3, //Número de columnas
+          no_columns: 4, //Número de columnas
           padding_x: 15, //Márgenes internas horizontal
           padding_y: 20, //Márgenes internas vertical
           margin_bottom: 50, //Márgen externa inferor
-          
-  
-
+        
           single_column_breakpoint: 776 //Punto de quiebre para una sola columna
         });
 
