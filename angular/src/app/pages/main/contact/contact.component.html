@@ -2,54 +2,67 @@
 	FORMULARIO
 	======================================-->
 
-	<div class="container-fluid p-0 bg-white" id="formulario">
+	<div class="container" id="contact">
 		
-		<h2 class="text-uppercase pt-5 text-muted text-center">Contactanos</h2>
+		<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Contactanos</h1>
 
-		<div class="container">
+		<hr class="mt-2 mb-5">
+
+		<div class="row">
+
+			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
+
+
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
 			
-			<form class="bg-light p-4 needs-validation" (ngSubmit)="sendEmail(f)" #f="ngForm" novalidate>
-				
-				<h4 class="bg-dark text-white text-center p-2">Ingrese los datos</h4>
-				
-				<div class="form-group">
+				<form class="p-4 needs-validation" (ngSubmit)="sendEmail(f)" #f="ngForm" novalidate>
 					
-					<label for="usuario">Ingrese su nombre</label>
-
-					<input type="text" id="usuario" name="name" class="form-control" placeholder="Escriba su usuario con mínimo 2 caracteres, máximo 6 caracteres sin usar números" minlength="2" maxlength="6" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name"  required>
-
-				  	<div class="valid-feedback">Valid.</div>
-    				<div class="invalid-feedback">Please fill out this field.</div>
-
-				</div>
-
-				<div class="form-group">
-
-					<label for="email">Ingrese su correo electrónico:</label>
-
-					<input type="email" id="email" class="form-control"  placeholder="Escriba su correo" name="email" [(ngModel)] ="customer.email" required>
-
-					<div class="valid-feedback">Valid.</div>
-    				<div class="invalid-feedback">Please fill out this field.</div>
-
-				</div>
-
-				<div class="form-group">
-					  <label for="mensajes">Mensaje:</label>
-					  
-					  <textarea class="form-control" rows="5" id="mensajes" name="message" [(ngModel)]="customer.message" required></textarea>
-					  
-			  		<div class="valid-feedback">Valid.</div>
-    				<div class="invalid-feedback">Please fill out this field.</div>
-			  	</div>
-
-				<div *ngIf="errorCreado" class="alert alert-danger">{{mensajeApi}}</div>
-				<div *ngIf="creado" class="alert alert-success">{{mensajeApi}}</div>
-
-				<button type="submit" class="btn btn-primary btn-block">Enviar</button>
-
-			</form>
+					<div class="form-group">      
+						<input type="text" name="name" class="form-control" minlength="2" maxlength="12" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Nombre</label>
+	
+						<div class="valid-feedback">Valid.</div>
+						<div class="invalid-feedback">Please fill out this field.</div>
+					</div>
+	
+					<div class="form-group">      
+						<input type="email" name="email" class="form-control" [(ngModel)] ="customer.email"  required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Email</label>
+					</div>
+	
+					<div class="form-group">      
+						<input type="text" name="message" class="form-control" [(ngModel)]="customer.message" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Message</label>
+	
+						<div class="valid-feedback">Valid.</div>
+						<div class="invalid-feedback">Please fill out this field.</div>
+					</div>
+	
+					<!-- <div class="form-group">
+						  <label for="mensajes">Mensaje:</label>
+						  
+						  <textarea class="form-control" rows="5" id="mensajes"  required></textarea>
+						  
+						  <div class="valid-feedback">Valid.</div>
+						<div class="invalid-feedback">Please fill out this field.</div>
+					  </div> -->
+	
+					<button type="submit" class="btn btn-primary btn-block">Enviar</button>
+	
+				</form>
+	
+			</div>
 
 		</div>
+
+		
 
 	</div>

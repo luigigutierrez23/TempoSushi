@@ -56,6 +56,7 @@ app.use(require('./Routes/slide.route'));
 app.use(require('./Routes/product.route'));
 app.use(require('./Routes/administrator.route'));
 app.use(require('./Routes/contact.route'));
+app.use(require('./Routes/gallery.route'));
 
 
 /*---------------------------------------

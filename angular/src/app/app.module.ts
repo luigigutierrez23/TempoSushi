@@ -23,8 +23,11 @@ import { MainComponent } from './pages/main/main.component';
 import { HeaderComponent } from './pages/main/header/header.component';
 import { SlideComponent } from './pages/main/slide/slide.component';
 import { ProductsComponent } from './pages/main/products/products.component';
-import {  FilterPipe } from './pages/main/products/pipes/filter.pipe';
+import { AboutComponent } from './pages/main/about/about.component';
+import { GalleryComponent } from './pages/main/gallery/gallery.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
+
+import {  FilterPipe } from './pages/main/products/pipes/filter.pipe';
 
 //Los decoradores son funciones que modifican clases de Javascript
 
@@ -36,7 +39,9 @@ import { ContactComponent } from './pages/main/contact/contact.component';
     AppComponent,
     HeaderComponent,
     SlideComponent,
-    ProductsComponent, 
+    ProductsComponent,
+    AboutComponent,
+    GalleryComponent, 
     ContactComponent,
     FilterPipe,
     MainComponent

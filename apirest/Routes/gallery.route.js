@@ -9,21 +9,21 @@ const app = express();
 Importamos el controlador
 --------------------------------------*/
 
-const Slide = require('../Controllers/slide.controller');
+const Galeria = require('../Controllers/gallery.controller');
 
 /*---------------------------------------
 Creamos las rutas HTTP
 --------------------------------------*/
 
-app.get('/mostrar-slide', Slide.mostrarSlide);
+app.get('/mostrar-galeria', Galeria.mostrarGaleria);
 
-app.post('/crear-slide',  Slide.crearSlide);
+app.post('/crear-galeria',  Galeria.crearGaleria);
 
-app.put('/editar-slide/:id',  Slide.editarSlide);
+app.put('/editar-galeria/:id',  Galeria.editarGaleria);
 
-app.delete('/eliminar-slide/:id',  Slide.eliminarSlide);
+app.delete('/eliminar-galeria/:id',  Galeria.eliminarGaleria);
 
-app.get('/mostrar-img/:imagen', Slide.mostrarImg);
+app.get('/mostrar-img-galeria/:image', Galeria.mostrarImg);
 
 /*---------------------------------------
 Exportamos la ruta

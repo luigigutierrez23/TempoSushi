@@ -3,7 +3,7 @@
 JD SLIDER
 =============================================*/
 
-.container-fluid{
+/* .container-fluid{
 	margin-top: -8px;
 }
 .slide-inner img{
@@ -11,18 +11,6 @@ JD SLIDER
 }
 .slide-area li{
 	position: relative;
-}
-.overlay{
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(8, 3, 3, 0.507);
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-    position: absolute;
 }
 
 .slide-text{
@@ -45,4 +33,31 @@ JD SLIDER
 .slide-text p{
 	font-size: 80px;
 	letter-spacing: .2em;
+} */
+
+.slider{
+	margin-top: -8px;
 }
+
+.overlay{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(8, 3, 3, 0.322);
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    position: absolute;
+}
+
+.carousel-item {
+	height: 100vh;
+	min-height: 350px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }

@@ -2,9 +2,12 @@
 	PRODUCTOS
 	======================================-->	
 
-	<div class="container-fluid p-0 bg-white products" id="products">
+	<div class="container products" id="products">
 
-		<h2 class="text-uppercase py-3 text-muted text-center">Nuestros Productos</h2>
+		<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Nuestros Productos</h1>
+
+		<hr class="mt-2 mb-5">
+
 			<div class="container-menu">
 
 				<ul class="">
@@ -48,41 +51,28 @@
 			</div>
 				
 		
-		<div class="pinterest_grid">		
+		<div class="card-deck row text-center text-lg-left">		
+			
+			<div *ngFor="let item of productsJson  | ProductsFilter: filterBy ; let lastItem = last"  class="col-lg-4 col-md-4 col-6 mb-4 card-item {{item.category}}">
 				
-			<div *ngFor="let item of productsJson  | ProductsFilter: filterBy ; let lastItem = last"  class="card-item white-panel item  {{item.category}}" style="width:400px">
-
-				<a href="{{url}}/mostrar-img-producto/{{item.image}}" data-toggle="lightbox"   data-gallery="gallery">
+				<div class="card">
+				
 					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
-				</a>
-
-				<div class="card-body">
-					<h4 class="card-title">{{item.title}}</h4>
-					<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
-					<p>Precio   <strong>{{item.price}}</strong></p>
-					<a href="#" class="btn btn-warning">Pedir ahora</a>
-
+				
+	
+					<div class="card-body">
+						<h4 class="card-title">{{item.title}}</h4>
+						<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
+						<p>Precio   <strong>{{item.price}}</strong></p>
+						<a href="#" class="btn btn-warning">Pedir ahora</a>
+					</div>
+						
+					{{lastItem ? callback() : "" }}
+	
 				</div>
-					
-				{{lastItem ? callback() : "" }}
 
 			</div>
 
 		</div>
 
 	</div>
-<!-- 
-	<script>
-
-		/*=============================================
-        Mixitup
-        =============================================*/
-		var containerEl = document.querySelector('[data-ref="mixitup-container"]');
-		console.log(containerEl);
-		var mixer = mixitup('.container', {
-			selectors: {
-				target: '.item'
-			}
-		});
-
-	</script> -->
