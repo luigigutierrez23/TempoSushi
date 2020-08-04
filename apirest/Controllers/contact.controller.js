@@ -58,7 +58,7 @@ let sendEmail = (req,res)=>{
         }
 
     });
-
+    
     const mailOptions = {
         from: `”${body.name} 👻” <noreply@suarezana.com>`,
         to: 'luigijose.gutierrez@gmail.com', // Cambia esta parte por el destinatario
@@ -68,6 +68,8 @@ let sendEmail = (req,res)=>{
         <strong>E-mail:</strong> ${body.email} <br/>
         <strong>Mensaje:</strong> ${body.message}`
     };
+
+   
 
     transporter.sendMail(mailOptions, (err, info) => {
         

@@ -25,18 +25,11 @@ JD SLIDER
 	text-shadow:0px 0px 5px black;
 	z-index: 2;
 }
-.slide-text h3{
-	font-size: 200px;
-	letter-spacing: .2em;
-	font-weight: 400;
-}
-.slide-text p{
-	font-size: 80px;
-	letter-spacing: .2em;
-} */
+
+ */
 
 .slider{
-	margin-top: -8px;
+	margin-top:-8px !important;
 }
 
 .overlay{
@@ -44,12 +37,13 @@ JD SLIDER
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(8, 3, 3, 0.322);
-    height: 100vh;
+    background-color: rgba(8, 3, 3, 0.384);
+    height: 100% !important;
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
-    position: absolute;
+	position: absolute;
+	overflow: hidden;
 }
 
 .carousel-item {
@@ -60,4 +54,24 @@ JD SLIDER
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	font-family: 'Harukaze';
+
   }
+  .carousel-item img{
+	height: 100%;
+	width: 100% !important;
+  }
+  .carousel-inner{
+	margin-top: 0 !important;
+  }
+
+  .carousel-item h2{
+	font-size: 210px;
+	letter-spacing: .1em;
+	font-weight: 400;
+}
+.carousel-item p{
+	font-family: 'bonzai';
+	font-size: 50px;
+	letter-spacing: .2em;
+}

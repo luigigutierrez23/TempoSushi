@@ -2,9 +2,9 @@
 	PRODUCTOS
 	======================================-->	
 
-	<div class="container products" id="products">
+	<div class="container-products" id="products">
 
-		<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Nuestros Productos</h1>
+		<h1 class="font-weight-light text-center mt-4 mb-0">Nuestros Productos</h1>
 
 		<hr class="mt-2 mb-5">
 
@@ -31,7 +31,7 @@
 						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>
 						<span>Entradas</span>
 					</li>
-
+				
 					<li class="btn" [class.active]="filterBy=='rolls'" (click)="filterBy='rolls'">
 						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>
 						<span>Rolls</span>
@@ -51,20 +51,20 @@
 			</div>
 				
 		
-		<div class="card-deck row text-center text-lg-left">		
+		<div class="col-md-12 col-xs-12 card-deck row text-center text-lg-left">		
 			
 			<div *ngFor="let item of productsJson  | ProductsFilter: filterBy ; let lastItem = last"  class="col-lg-4 col-md-6 col-sm-12 mb-4 card-item {{item.category}}">
 				
-				<div class="card">
+				<div class="card" style="border: none;">
 				
 					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
 				
 	
-					<div class="card-body">
+					<div class="card-body colorcard">
 						<h4 class="card-title">{{item.title}}</h4>
-						<textarea readonly class="card-text" style="border: none;">{{item.description}}</textarea>
-						<p>Precio   <strong>{{item.price}}</strong></p>
-						<a href="#" class="btn btn-warning">Pedir ahora</a>
+						<textarea readonly class="card-text colorcard" style="border: none; width: 100%;">{{item.description}}</textarea>
+						<p>Precio   <strong> ${{item.price}}</strong></p>
+						<a href="#" class="btn colorcentral">Lo Quiero!</a>
 					</div>
 						
 					{{lastItem ? callback() : "" }}

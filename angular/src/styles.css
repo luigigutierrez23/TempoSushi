@@ -2,4 +2,25 @@
 @font-face{
     font-family: 'Harukaze';
     src: url(assets/fuentes/Harukaze.ttf);
+    font-family: 'bonzai';
+    src: url(assets/fuentes/bonzai.ttf);
   }
+  
+ /*COLORES PREDEFINIDOS*/
+:root{
+  --btncolor: #7c0a02;
+  --bodycolor:#272121;
+  --colorcentral: #ea6227;
+  --facebook: #3b5998;
+  --twitter:#00acee;
+}
+body{
+  margin: 0;
+  background: var(--bodycolor);
+}
+.colorcard{
+  background: #e5dfdf ;
+}
+.colorcentral{
+  background:var(--colorcentral) ;
+}
