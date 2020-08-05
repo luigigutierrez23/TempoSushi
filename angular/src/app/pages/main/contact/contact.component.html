@@ -6,19 +6,34 @@
 		
 		<h1 class="font-weight-light text-center mt-4 mb-0">Contactanos</h1>
 
-		<hr class="mt-2 mb-5">
+		<hr class="mt-2 mb-3">
 
 		<div class="row">
 
 			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
 
+				<h2  class="font-weight-light text-center mt-4 mb-0">Ubicanos</h2>
+
+				<hr class="mt-2 mb-3">
+				<p><i class="fas fa-map-marker-alt"></i><span> Capital Federal</span></p>
+				<p><i class="fas fa-phone-volume"></i><span><b> Teléfonos</b> +54 9 1122530084</span></p>
+
+				<h3  class="font-weight-light text-center mt-4 mb-0">Síguenos en nuestras redes</h3>
+				<hr class="mt-2 mb-3">
+				<div class="redesIcon">
+					<a href="" target="_blank" style="color: white;"><i class="fa fa-facebook-official"></i></a>
+					<a href="" target="_blank" style="color: white;"><i class="fa fa-instagram"></i></a>
+					<a href="" target="_blank" style="color: white;"><i class="fa fa-twitter"></i></a>
+				</div>
 
 			</div>
 
 			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
-			
+
+				<h2  class="font-weight-light text-center mt-4 mb-0">Sigamos en contácto</h2>
+
 				<form class="p-4 needs-validation" (ngSubmit)="sendEmail(f)" #f="ngForm" novalidate>
-					
+				
 					<div class="form-group">      
 						<input type="text" name="name" class="form-control" minlength="2" maxlength="12" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name" required>
 						<span class="highlight"></span>

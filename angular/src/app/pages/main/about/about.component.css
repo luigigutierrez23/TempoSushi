@@ -1,6 +1,16 @@
+
 .container h1{
     font-size: 80px;
     font-family: 'Harukaze' !important;
     color: white;
     letter-spacing:.2em;
+}
+.container .text-muted{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+    letter-spacing: .01rem;
+    line-height: 40px;
+    font-weight: 600;
 }

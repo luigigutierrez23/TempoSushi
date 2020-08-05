@@ -1,3 +1,25 @@
+.container{
+	color: white;
+}
+.redesIcon{
+	display: block;
+	width: 100%;
+	text-align: center;
+  }
+  .redesIcon a .fa{
+	font-size: 26px;
+	margin-bottom: 50px;
+	display: inline-block;
+	padding: 6px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	margin-right: 15px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: .2s;
+  }
+
 /*=============================================
 ICHECK PERSONALIZADO
 =============================================*/

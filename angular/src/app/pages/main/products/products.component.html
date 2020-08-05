@@ -64,7 +64,7 @@
 						<h4 class="card-title">{{item.title}}</h4>
 						<textarea readonly class="card-text colorcard" style="border: none; width: 100%;">{{item.description}}</textarea>
 						<p>Precio   <strong> ${{item.price}}</strong></p>
-						<a href="#" class="btn colorcentral">Lo Quiero!</a>
+						<a href="#" id="{{item.category}}" class="btn colorcentral">Quiero!</a>
 					</div>
 						
 					{{lastItem ? callback() : "" }}
