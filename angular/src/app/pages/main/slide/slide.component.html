@@ -61,7 +61,7 @@
 				<div class="carousel-item active" *ngFor="let slide of slideJson; let primerIndice = first" [ngClass]="{active:primerIndice}">
 					<div class="overlay"></div>
 					<img src="{{url}}/mostrar-img/{{slide.imagen}}" alt="" class="img-fluid">
-					<div class="carousel-caption d-none d-md-block">
+					<div class="carousel-caption d-md-block">
 					<h2 class="display-4">{{slide.titulo}}</h2>
 					<p class="lead">{{slide.descripcion}}</p>
 					</div>

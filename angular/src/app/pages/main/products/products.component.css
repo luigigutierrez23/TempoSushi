@@ -1,4 +1,6 @@
-
+.container-products{
+    padding-right: 0;
+}
 .container-products h1{
     font-size: 80px;
     font-family: 'Harukaze' !important;
@@ -7,6 +9,10 @@
 }
 .container-menu{
     text-align: center;
+    white-space:nowrap;
+    min-width:100%;
+    overflow-x:scroll;
+    overflow-y:hide;
 }
 
 ul{
@@ -80,3 +86,26 @@ li span{
     transition:.4s all ;
 }
 /*SECTION CARDS PRODUCTS*/
+
+
+
+/*=============================================
+     MEDIAS QUERYS
+=============================================*/
+/* 
+@media screen and (max-width:576px){
+    .container-menu{
+        white-space:nowrap;
+        min-width:100%;
+        overflow-x:scroll;
+        overflow-y:hide;
+    }
+}
+@media screen and (max-width:768px){
+    .container-menu{
+        white-space:nowrap;
+        min-width:100%;
+        overflow-x:scroll;
+        overflow-y:hide;
+    }
+  } */

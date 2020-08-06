@@ -6,17 +6,19 @@
 		
 		<h1 class="font-weight-light text-center mt-4 mb-0">Contactanos</h1>
 
-		<hr class="mt-2 mb-3">
-
 		<div class="row">
 
-			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
+			<div class="col-lg-6 col-md-6 col-sm-12">
 
 				<h2  class="font-weight-light text-center mt-4 mb-0">Ubicanos</h2>
 
 				<hr class="mt-2 mb-3">
-				<p><i class="fas fa-map-marker-alt"></i><span> Capital Federal</span></p>
-				<p><i class="fas fa-phone-volume"></i><span><b> Teléfonos</b> +54 9 1122530084</span></p>
+				<div class="redesIcon">
+					<p><i class="fas fa-map-marker-alt"></i><span> Capital Federal</span></p>
+					<p><i class="fas fa-phone-volume"></i><span><b> Teléfonos</b> +54 9 1122530084</span></p>
+				</div>
+				
+				<hr class="mt-2 mb-3">
 
 				<h3  class="font-weight-light text-center mt-4 mb-0">Síguenos en nuestras redes</h3>
 				<hr class="mt-2 mb-3">
@@ -28,14 +30,14 @@
 
 			</div>
 
-			<div class="col-lg-6 col-md-6 col-sm-12 p-5">
+			<div class="col-lg-6 col-md-6 col-sm-12">
 
 				<h2  class="font-weight-light text-center mt-4 mb-0">Sigamos en contácto</h2>
 
 				<form class="p-4 needs-validation" (ngSubmit)="sendEmail(f)" #f="ngForm" novalidate>
 				
 					<div class="form-group">      
-						<input type="text" name="name" class="form-control" minlength="2" maxlength="12" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name" required>
+						<input type="text" name="name" class="form-control colorcard" minlength="2" maxlength="12" pattern="(?=.*[A-Za-z]).{2,6}" [(ngModel)] ="customer.name" required>
 						<span class="highlight"></span>
 						<span class="bar"></span>
 						<label>Nombre</label>
@@ -45,14 +47,14 @@
 					</div>
 	
 					<div class="form-group">      
-						<input type="email" name="email" class="form-control" [(ngModel)] ="customer.email"  required>
+						<input type="email" name="email" class="form-control colorcard" [(ngModel)] ="customer.email"  required>
 						<span class="highlight"></span>
 						<span class="bar"></span>
 						<label>Email</label>
 					</div>
 	
 					<div class="form-group">      
-						<input type="text" name="message" class="form-control" [(ngModel)]="customer.message" required>
+						<input type="text" name="message" class="form-control colorcard" [(ngModel)]="customer.message" required>
 						<span class="highlight"></span>
 						<span class="bar"></span>
 						<label>Message</label>
@@ -70,7 +72,7 @@
 						<div class="invalid-feedback">Please fill out this field.</div>
 					  </div> -->
 	
-					<button type="submit" class="btn btn-primary btn-block">Enviar</button>
+					<button type="submit" class="btn colorcentral btn-block">Enviar</button>
 	
 				</form>
 	

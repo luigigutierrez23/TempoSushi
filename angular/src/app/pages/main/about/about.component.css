@@ -6,11 +6,12 @@
     letter-spacing:.2em;
 }
 .container .text-muted{
+    padding: 0 15px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     text-align: justify;
     color: white;
     letter-spacing: .01rem;
-    line-height: 40px;
+    line-height: 35px;
     font-weight: 600;
 }

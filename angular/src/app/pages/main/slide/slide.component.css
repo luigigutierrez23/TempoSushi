@@ -75,3 +75,24 @@ JD SLIDER
 	font-size: 50px;
 	letter-spacing: .2em;
 }
+
+/*=============================================
+     MEDIAS QUERYS
+=============================================*/
+ 
+@media screen and (max-width:576px){
+    .carousel-item h2{
+		font-size: 80px;
+	}
+	.carousel-item p{
+		font-size: 30px;
+	}
+}
+@media screen and (max-width:768px){
+	.carousel-item h2{
+		font-size: 150px;
+	}
+	.carousel-item p{
+		font-size: 40px;
+	}
+}

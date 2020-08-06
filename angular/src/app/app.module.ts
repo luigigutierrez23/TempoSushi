@@ -28,6 +28,7 @@ import { GalleryComponent } from './pages/main/gallery/gallery.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
 
 import {  FilterPipe } from './pages/main/products/pipes/filter.pipe';
+import { FooterComponent } from './pages/main/footer/footer.component';
 
 //Los decoradores son funciones que modifican clases de Javascript
 
@@ -44,7 +45,8 @@ import {  FilterPipe } from './pages/main/products/pipes/filter.pipe';
     GalleryComponent, 
     ContactComponent,
     FilterPipe,
-    MainComponent
+    MainComponent,
+    FooterComponent
    
   ],
 

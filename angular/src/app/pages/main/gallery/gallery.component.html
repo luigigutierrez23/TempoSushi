@@ -6,7 +6,7 @@
 
   <div class="row text-center text-lg-left">
      
-      <div class="col-lg-3 col-md-4 col-6" *ngFor="let item of galleryJson; let lastItem = last">
+      <div class="col-lg-4 conditions-parser-2 col-xs-12" *ngFor="let item of galleryJson; let lastItem = last">
         
         <a href="{{url}}/mostrar-img-galeria/{{item.image}}"  class="d-block mb-4 h-100" data-toggle="lightbox" data-gallery="example-gallery">
           <img class="img-fluid img-thumbnail" src="{{url}}/mostrar-img-galeria/{{item.image}}"  alt="">
