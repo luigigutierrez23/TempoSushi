@@ -19,6 +19,7 @@
 	cursor: pointer;
 	transition: .2s;
   }
+  
 
 /*=============================================
 ICHECK PERSONALIZADO
@@ -40,7 +41,7 @@ input{
 	display:block;
 	/* width:300px; */
 	border:none;
-	border-bottom:1px solid #757575;
+	border-bottom:1px solid var(--colorcentral);
 }
 input:focus{
 	outline:none; 
@@ -48,9 +49,10 @@ input:focus{
 
 /* LABEL ======================================= */
 label{
+	font-family: 'Source Sans Pro', sans-serif;
 	color:#999; 
 	font-size:18px;
-	font-weight:normal;
+	font-weight:bold;
 	position:absolute;
 	pointer-events:none;
 	left:5px;
@@ -64,7 +66,8 @@ label{
 input:focus ~ label, input:valid ~ label{
 	top:-25px;
 	font-size:14px;
-	color:#5264AE;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:var(--colorcentral);
 }
 
 /* width:300px; */
@@ -76,7 +79,7 @@ input:focus ~ label, input:valid ~ label{
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#5264AE; 
+  background:var(--colorcentral); 
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -110,38 +113,28 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 	-moz-animation:inputHighlighter 0.3s ease;
 	animation:inputHighlighter 0.3s ease;
   }
+  form .btn{
+	  color: white;
+	  font-size: 18px;
+	  font-weight: bold;
+	  font-family: 'Source Sans Pro', sans-serif;
+  }
+  form .btn:hover{
+	background: rgb(39, 39, 39);
+	transition:.4s all ;
+}
+
   
   /* ANIMATIONS ================ */
   @-webkit-keyframes inputHighlighter {
-	  from { background:#5264AE; }
+	  from { background:var(--colorcentral);}
 	to 	{ width:0; background:transparent; }
   }
   @-moz-keyframes inputHighlighter {
-	  from { background:#5264AE; }
+	  from { background:var(--colorcentral); }
 	to 	{ width:0; background:transparent; }
   }
   @keyframes inputHighlighter {
-	  from { background:#5264AE; }
+	  from { background:var(--colorcentral); }
 	to 	{ width:0; background:transparent; }
   }
-
-
-
-/* .terminos{
-	display:none;	
-}
-
-.check{
-	display:inline-block;
-	width:22px;
-	height:22px;
-	background: url(../../../../assets/css/plugins/blue.png);
-	background-position: 0px top;
-	vertical-align:middle;
-	margin-right:10px;
-	cursor:pointer;
-}
-
-.terminos:checked + .check{
-	background-position: -20px top;
-} */
