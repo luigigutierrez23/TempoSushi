@@ -1,140 +1,183 @@
-.container{
-	color: white;
+.container {
+  color: white;
 }
-.redesIcon{
-	display: block;
-	width: 100%;
-	text-align: center;
-  }
-  .redesIcon a .fa{
-	font-size: 26px;
-	margin-bottom: 50px;
-	display: inline-block;
-	padding: 6px;
-	text-align: center;
-	line-height: 30px;
-	color: white;
-	margin-right: 15px;
-	text-decoration: none;
-	cursor: pointer;
-	transition: .2s;
-  }
-  
+.redesIcon {
+  display: block;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.redesIcon a {
+  display: block;
+  text-decoration: none;
+}
+.redesIcon a .fa {
+  border-radius: 1000px;
+  font-size: 26px;
+  width: 45px;
+  background: rgba(255, 254, 254, 0.87);
+  margin-bottom: 38px;
+  color: var(--bodycolor);
+  display: inline-block;
+  padding: 6px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
 /*=============================================
 ICHECK PERSONALIZADO
 =============================================*/
 /* form starting stylings ------------------------------- */
-.container h1{
-    font-size: 80px;
-    font-family: 'Harukaze' !important;
-    color: white;
-    letter-spacing:.2em;
+.container h1 {
+  font-size: 80px;
+  font-family: "Harukaze" !important;
+  color: white;
+  letter-spacing: 0.2em;
 }
-.form-group{ 
-	position:relative; 
-	margin-bottom:45px; 
+.form-group {
+  position: relative;
+  margin-bottom: 45px;
 }
-input{
-	font-size:18px;
-	padding:10px 10px 10px 5px;
-	display:block;
-	/* width:300px; */
-	border:none;
-	border-bottom:1px solid var(--colorcentral);
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  /* width:300px; */
+  border: none;
+  border-bottom: 1px solid var(--colorcentral);
 }
-input:focus{
-	outline:none; 
+input:focus {
+  outline: none;
 }
 
 /* LABEL ======================================= */
-label{
-	font-family: 'Source Sans Pro', sans-serif;
-	color:#999; 
-	font-size:18px;
-	font-weight:bold;
-	position:absolute;
-	pointer-events:none;
-	left:5px;
-	top:10px;
-	transition:0.2s ease all; 
-	-moz-transition:0.2s ease all; 
-	-webkit-transition:0.2s ease all;
+label {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #999;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label{
-	top:-25px;
-	font-size:14px;
-	font-family: 'Source Sans Pro', sans-serif;
-	color:var(--colorcentral);
+input:focus ~ label,
+input:valid ~ label {
+  top: -25px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--colorcentral);
 }
 
 /* width:300px; */
 /* BOTTOM BARS ================================= */
-.bar{ position:relative; display:block;  }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:var(--colorcentral); 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+.bar {
+  position: relative;
+  display: block;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--colorcentral);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 .bar:before {
-  left:50%;
+  left: 50%;
 }
 .bar:after {
-  right:50%; 
+  right: 50%;
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
 }
 
 /* HIGHLIGHTER ================================== */
 .highlight {
-	position:absolute;
-	height:60%; 
-	width:100px; 
-	top:25%; 
-	left:0;
-	pointer-events:none;
-	opacity:0.5;
-  }
-  
-  /* active state */
-  input:focus ~ .highlight {
-	-webkit-animation:inputHighlighter 0.3s ease;
-	-moz-animation:inputHighlighter 0.3s ease;
-	animation:inputHighlighter 0.3s ease;
-  }
-  form .btn{
-	  color: white;
-	  font-size: 18px;
-	  font-weight: bold;
-	  font-family: 'Source Sans Pro', sans-serif;
-  }
-  form .btn:hover{
-	background: rgb(39, 39, 39);
-	transition:.4s all ;
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
-  
-  /* ANIMATIONS ================ */
-  @-webkit-keyframes inputHighlighter {
-	  from { background:var(--colorcentral);}
-	to 	{ width:0; background:transparent; }
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+form .btn {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 100px;
+}
+form .btn:hover {
+  background: rgb(39, 39, 39);
+  transition: 0.4s all;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: var(--colorcentral);
   }
-  @-moz-keyframes inputHighlighter {
-	  from { background:var(--colorcentral); }
-	to 	{ width:0; background:transparent; }
+  to {
+    width: 0;
+    background: transparent;
   }
-  @keyframes inputHighlighter {
-	  from { background:var(--colorcentral); }
-	to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: var(--colorcentral);
   }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: var(--colorcentral);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/*=============================================
+     MEDIAS QUERYS
+=============================================*/
+@media screen and (max-width: 576px) {
+  .redesIcon {
+    padding: 40px !important;
+  }
+  .redesIcon a {
+    font-size: 14px;
+  }
+  .redesIcon a .fa {
+    font-size: 16px;
+    width: 37px;
+  }
+}

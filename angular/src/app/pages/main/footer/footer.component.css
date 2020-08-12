@@ -1,0 +1,42 @@
+.container {
+}
+
+.redesIcon {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.redesIcon h3 {
+  color: white;
+}
+.redesIcon a .fa {
+  font-size: 26px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  display: inline-block;
+  padding: 6px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.textFooter {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.redesIcon .btn {
+  margin-top: 25px;
+  color: white;
+  font-size: 20px;
+  padding: 5px 15px;
+  font-weight: 400;
+  border-radius: 100px;
+  margin-bottom: 30px;
+}
+.redesIcon .btn:hover {
+  background: rgb(39, 39, 39);
+  transition: 0.4s all;
+}

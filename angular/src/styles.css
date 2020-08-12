@@ -1,27 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face{
-    font-family: 'Harukaze';
-    src: url(assets/fuentes/Harukaze.ttf);
-    font-family: 'bonzai';
-    src: url(assets/fuentes/bonzai.ttf);
-  }
-  
- /*COLORES PREDEFINIDOS*/
-:root{
+@font-face {
+  font-family: "Harukaze";
+  src: url(assets/fuentes/Harukaze.ttf);
+  font-family: "bonzai";
+  src: url(assets/fuentes/bonzai.ttf);
+}
+
+/*COLORES PREDEFINIDOS*/
+:root {
   --btncolor: #7c0a02;
-  --bodycolor:#050505;
+  --bodycolor: #050505;
   --colorcentral: #ea6227;
   --facebook: #3b5998;
-  --twitter:#00acee;
+  --twitter: #00acee;
 }
-body{
+body {
   margin: 0;
   background: var(--bodycolor);
 }
-.colorcard{
+.colorcard {
   background: rgba(0, 0, 0, 0.925);
-  
 }
-.colorcentral{
-  background:var(--colorcentral) ;
+.colorcentral {
+  background: var(--colorcentral);
 }

@@ -1,146 +1,144 @@
-.container-products{
-    padding-right: 0;
+.container-products {
+  padding-right: 0;
 }
-.container-products h1{
-    font-size: 80px;
-    font-family: 'Harukaze' !important;
-    color: white;
-    letter-spacing:.2em;
+.container-products h1 {
+  font-size: 80px;
+  font-family: "Harukaze" !important;
+  color: white;
+  letter-spacing: 0.2em;
 }
-.container-menu{
-    text-align: center;
-    bottom: 20px;
+.container-menu {
+  text-align: center;
+  bottom: 20px;
 }
 .container-menu::-webkit-scrollbar {
-    width: 2px;
- 
-  }
-  
-   /* Estilos barra (thumb) de scroll */
-  .container-menu::-webkit-scrollbar-thumb {
-    background: rgba(12, 11, 11, 0.404);
-    border-radius: 4px;
-  }
-  
-  .container-menu::-webkit-scrollbar-thumb:active {
-    background-color: rgba(0, 0, 0, 0.479);
-  }
-  
-  .container-menu::-webkit-scrollbar-thumb:hover {
-    background: #000;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  }
-  
-   /* Estilos track de scroll */
-  .container-menu::-webkit-scrollbar-track {
-    background: rgba(54, 53, 53, 0.479);
-    border-radius: 4px;
-  }
-  
-  .container-menu::-webkit-scrollbar-track:hover, 
-  .container-menu::-webkit-scrollbar-track:active {
-    background: rgba(54, 53, 53, 0.479);;
-  }
-
-ul{
-    display: inline-block;
-    text-align: center;
-    padding: 20px 20px;
-}
- li {
-    display: inline-block;
-    padding: 0 20px;
+  width: 2px;
 }
 
-li a{
-   color: #daa40eea;
-   transition: .2s all;
+/* Estilos barra (thumb) de scroll */
+.container-menu::-webkit-scrollbar-thumb {
+  background: rgba(12, 11, 11, 0.404);
+  border-radius: 4px;
 }
 
-li img:hover{
-    transform: scaleX(-3px);
-    transition: .2s all;
+.container-menu::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.479);
 }
-li span{
-    color: white;
-    font-family: 'bonzai';
-    font-size: 26px;
+
+.container-menu::-webkit-scrollbar-thumb:hover {
+  background: #000;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.container-menu::-webkit-scrollbar-track {
+  background: rgba(54, 53, 53, 0.479);
+  border-radius: 4px;
+}
+
+.container-menu::-webkit-scrollbar-track:hover,
+.container-menu::-webkit-scrollbar-track:active {
+  background: rgba(54, 53, 53, 0.479);
+}
+
+ul {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 20px;
+}
+li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+li a {
+  color: #daa40eea;
+  transition: 0.2s all;
+}
+
+li img:hover {
+  transform: scaleX(-3px);
+  transition: 0.2s all;
+}
+li span {
+  color: white;
+  font-family: "bonzai";
+  font-size: 26px;
 }
 /****************SECTION CARDS PRODUCTS*************/
-.card{
-    border-radius: 10px;
-    -webkit-box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
-    -moz-box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
-    box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
-
+.card {
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
+  -moz-box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
+  box-shadow: -1px 11px 30px 0px rgba(201, 201, 201, 0.349);
 }
-.card-body{
-    padding: 30px;
-    color: white;
-
+.card-body {
+  padding: 30px;
+  color: white;
 }
 
-.card-body h4{
-    font-size: 34px;
-    font-family: 'bonzai';
-    text-align: center;
-    font-weight: 400;
+.card-body h4 {
+  font-size: 34px;
+  font-family: "bonzai";
+  text-align: center;
+  font-weight: 400;
 }
-.card-body textarea{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0) !important;
+.card-body textarea {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
-.card-body p{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+.card-body p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
 }
-.card-body a{
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    letter-spacing: 0.2rem;
-    font-weight: bold;
-    font-family: 'Source Sans Pro', sans-serif;
-    transition:.4s all ;
+.card-body a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: 0.4s all;
+  border-radius: 100px;
 }
 
-.card-body a:hover{
-    background: rgb(39, 39, 39);
-    transition:.4s all ;
+.card-body a:hover {
+  background: rgb(39, 39, 39);
+  transition: 0.4s all;
 }
 
 /*=============================================
      MEDIAS QUERYS
 =============================================*/
 
-@media screen and (max-width:576px){
-    .container-menu{
-        white-space:nowrap;
-        min-width:100%;
-        overflow-x:scroll;
-        overflow-y:hide;
-        scrollbar-color:dark;
-        scrollbar-width: 10px;
-    }
+@media screen and (max-width: 576px) {
+  .container-menu {
+    white-space: nowrap;
+    min-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hide;
+    scrollbar-color: dark;
+    scrollbar-width: 10px;
+  }
 }
-@media screen and (max-width:768px){
-    .container-menu{
-        white-space:nowrap;
-        min-width:100%;
-        overflow-x:scroll;
-        overflow-y:hide;
-    }
+@media screen and (max-width: 768px) {
+  .container-menu {
+    white-space: nowrap;
+    min-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hide;
   }
-  @media screen and (max-width:993px){
-    .container-menu{
-        white-space:nowrap;
-        min-width:100%;
-        overflow-x:scroll;
-        overflow-y:hide;
-    }
+}
+@media screen and (max-width: 993px) {
+  .container-menu {
+    white-space: nowrap;
+    min-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hide;
   }
+}

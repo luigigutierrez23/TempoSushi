@@ -1,22 +1,27 @@
 <div class="container" id="gallery">
-
   <h1 class="font-weight-light text-center mt-4 mb-0">Galeria</h1>
 
-  <hr class="mt-2 mb-5">
+  <hr class="mt-2 mb-5" />
 
   <div class="row text-center text-lg-left">
-     
-      <div class="col-lg-4 conditions-parser-2 col-xs-12" *ngFor="let item of galleryJson; let lastItem = last">
-        
-        <a href="{{url}}/mostrar-img-galeria/{{item.image}}"  class="d-block mb-4 h-100" data-toggle="lightbox" data-gallery="example-gallery">
-          <img class="img-fluid img-thumbnail" src="{{url}}/mostrar-img-galeria/{{item.image}}"  alt="">
-        </a>
+    <div
+      class="col-lg-4 conditions-parser-2 col-xs-12"
+      *ngFor="let item of galleryJson; let lastItem = last"
+    >
+      <a
+        href="{{ url }}/mostrar-img-galeria/{{ item.image }}"
+        class="d-block mb-4 h-100"
+        data-toggle="lightbox"
+        data-gallery="example-gallery"
+      >
+        <img
+          class="img-fluid"
+          src="{{ url }}/mostrar-img-galeria/{{ item.image }}"
+          alt=""
+        />
+      </a>
 
-        {{lastItem ? callback() : "" }}
-
-      </div> 
-    
+      {{ lastItem ? callback() : "" }}
+    </div>
   </div>
-
 </div>
-
