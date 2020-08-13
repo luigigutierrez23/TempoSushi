@@ -1,78 +1,147 @@
 <!--=====================================
 	PRODUCTOS
-	======================================-->	
+	======================================-->
 
-	<div class="container-fluid container-products" id="products">
+<div class="container-fluid container-products" id="products">
+  <h1 class="font-weight-light text-center mt-4 mb-0">Nuestros Productos</h1>
 
-		<h1 class="font-weight-light text-center mt-4 mb-0">Nuestros Productos</h1>
+  <hr class="mt-2 mb-5" />
 
-		<hr class="mt-2 mb-5">
+  <div class="container-menu">
+    <ul class="">
+      <li
+        class="btn"
+        [class.active]="filterBy == 'all'"
+        (click)="filterBy = 'all'"
+      >
+        <img
+          src="assets/img/productos/promos.png"
+          alt="Promos"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Todos</span>
+      </li>
 
-			<div class="container-menu">
+      <li
+        class="btn"
+        [class.active]="filterBy == 'promociones'"
+        (click)="filterBy = 'promociones'"
+      >
+        <img
+          src="assets/img/productos/promos.png"
+          alt="Promos"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Promociones</span>
+      </li>
 
-				<ul class="">
-					
-					<li class="btn" [class.active]="filterBy=='all'" (click)="filterBy='all'">
-						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br>
-						<span>Todos</span>
-					</li>
+      <li
+        class="btn"
+        class="btn"
+        [class.active]="filterBy == 'temakis'"
+        (click)="filterBy = 'temakis'"
+      >
+        <img
+          src="assets/img/productos/temakis.png"
+          alt="Temakis"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Temakis</span>
+      </li>
 
-					<li class="btn" [class.active]="filterBy=='promociones'" (click)="filterBy='promociones'">
-						<img src="assets/img/productos/promos.png" alt="Promos" style="width: 80px; height: 70px;"><br> 
-						<span>Promociones</span>
-					</li>
+      <li
+        class="btn"
+        [class.active]="filterBy == 'entradas'"
+        (click)="filterBy = 'entradas'"
+      >
+        <img
+          src="assets/img/productos/cajita.png"
+          alt="Entradas"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Entradas</span>
+      </li>
 
-					<li class="btn" class="btn" [class.active]="filterBy=='temakis'" (click)="filterBy='temakis'">
-						<img src="assets/img/productos/temakis.png" alt="Temakis" style="width: 80px; height: 70px;"><br>
-						<span >Temakis</span>
-					</li>
+      <li
+        class="btn"
+        [class.active]="filterBy == 'rolls'"
+        (click)="filterBy = 'rolls'"
+      >
+        <img
+          src="assets/img/productos/roll.png"
+          alt="Rolls"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Rolls</span>
+      </li>
 
-					<li class="btn"  [class.active]="filterBy=='entradas'" (click)="filterBy='entradas'">
-						<img src="assets/img/productos/cajita.png" alt="Entradas" style="width: 80px; height: 70px;"><br>
-						<span>Entradas</span>
-					</li>
-				
-					<li class="btn" [class.active]="filterBy=='rolls'" (click)="filterBy='rolls'">
-						<img src="assets/img/productos/roll.png" alt="Rolls" style="width: 80px; height: 70px;"><br>
-						<span>Rolls</span>
-					</li>
-					
-					<li class="btn"  [class.active]="filterBy=='bebidas'" (click)="filterBy='bebidas'">
-						<img src="assets/img/productos/bebidas.png" alt="Bebidas" style="width: 80px; height: 70px;"><br>
-						<span>Bebidas</span>
-					</li>
+      <li
+        class="btn"
+        [class.active]="filterBy == 'bebidas'"
+        (click)="filterBy = 'bebidas'"
+      >
+        <img
+          src="assets/img/productos/bebidas.png"
+          alt="Bebidas"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Bebidas</span>
+      </li>
 
-					<li class="btn" [class.active]="filterBy=='sushi-salad'" (click)="filterBy='sushi-salad'">
-						<img src="assets/img/productos/salads.png" alt="Salads" style="width: 80px; height: 70px;"><br>
-						<span>Sushi salads</span>
-					</li>
+      <li
+        class="btn"
+        [class.active]="filterBy == 'sushi-salad'"
+        (click)="filterBy = 'sushi-salad'"
+      >
+        <img
+          src="assets/img/productos/salads.png"
+          alt="Salads"
+          style="width: 80px; height: 70px;"
+        /><br />
+        <span>Sushi salads</span>
+      </li>
+    </ul>
+  </div>
 
-				</ul>
-			</div>
-				
-		
-		<div class="col-md-12 col-xs-12 card-deck row text-center p-3">		
-			
-			<div *ngFor="let item of productsJson  | ProductsFilter: filterBy ; let lastItem = last"  class="col-lg-4 col-md-6 col-sm-12 mb-4 card-item {{item.category}}">
-				
-				<div class="card" style="border: none;">
-				
-					<img class="card-img-top" src="{{url}}/mostrar-img-producto/{{item.image}}" style="height: 200px;">
-				
-	
-					<div class="card-body colorcard">
-						<h4 class="card-title">{{item.title}}</h4>
-						<textarea readonly class="card-text colorcard" style="border: none; width: 100%;">{{item.description}}</textarea>
-						<p>Precio   <strong> ${{item.price}}</strong></p>
-						<a href="#" id="{{item.category}}" class="btn colorcentral">Quiero!</a>
-					</div>
-						
-					{{lastItem ? callback() : "" }}
-	
-				</div>
+  <div class="col-md-12 col-xs-12 card-deck row text-center p-3">
+    <div
+      *ngFor="
+        let item of productsJson | ProductsFilter: filterBy;
+        let lastItem = last
+      "
+      class="col-lg-4 col-md-6 col-sm-12 mb-4 card-item {{ item.category }}"
+    >
+      <div class="card" style="border: none;">
+        <img
+          class="card-img-top"
+          src="{{ url }}/mostrar-img-producto/{{ item.image }}"
+          style="height: 200px;"
+        />
 
-			</div>
+        <div class="card-body colorcard">
+          <h4 class="card-title">{{ item.title }}</h4>
+          <textarea
+            readonly
+            class="card-text colorcard"
+            style="border: none; width: 100%;"
+            >{{ item.description }}</textarea
+          >
+          <p>
+            Precio <strong> ${{ item.price }}</strong>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=+5491122517341&text=Hola,%20escribo%20desde%20su%20web.%20Quiero%20realizar%20un%20pedido%20de%20{{
+              item.title
+            }}"
+            target="_blank"
+            id="{{ item.category }}"
+            class="btn colorcentral"
+            >Quiero!</a
+          >
+        </div>
 
-		</div>
-
-	</div>
+        {{ lastItem ? callback() : "" }}
+      </div>
+    </div>
+  </div>
+</div>

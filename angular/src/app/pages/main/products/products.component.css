@@ -90,6 +90,39 @@ li span {
   color: white;
   background-color: rgba(0, 0, 0, 0) !important;
 }
+.card-body textarea::-webkit-scrollbar {
+  width: 2px;
+}
+
+.card-body textarea:-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.479);
+}
+/* Estilos barra (thumb) de scroll */
+.card-body textarea::-webkit-scrollbar-thumb {
+  background: rgba(12, 11, 11, 0.404);
+  border-radius: 4px;
+}
+
+.card-body textarea::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+.card-body textarea::-webkit-scrollbar-thumb:hover {
+  background: #000;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.card-body textarea::-webkit-scrollbar-track {
+  background: rgba(54, 53, 53, 0.479);
+  border-radius: 4px;
+}
+
+.card-body textarea::-webkit-scrollbar-track:hover,
+.container-menu::-webkit-scrollbar-track:active {
+  background: rgba(54, 53, 53, 0.479);
+}
+
 .card-body p {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
