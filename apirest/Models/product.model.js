@@ -29,10 +29,6 @@ let productSchema = new Schema({
     type: Number,
     required: [true, "La url es obligatoria"],
   },
-  title_ws: {
-    type: String,
-    required: [true, "El titulo de whatsapp es obligatorio"],
-  },
 });
 
 /*---------------------------------------

@@ -97,7 +97,6 @@ let crearProduct = (req, res) => {
       description: body.description,
       category: body.category,
       price: body.price,
-      title_ws: body.title_ws,
     });
 
     //Guardamos en MongoDB
@@ -244,7 +243,6 @@ let editarProduct = (req, res) => {
           description: body.description,
           category: body.category,
           price: body.price,
-          title_ws: body.title_ws,
         };
 
         //Actualizamos en MongoDB
