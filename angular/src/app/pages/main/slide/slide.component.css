@@ -43,11 +43,6 @@ JD SLIDER
   font-weight: 400;
   font-family: "Harukaze";
 }
-.carousel-item p {
-  font-family: "bonzai";
-  font-size: 50px;
-  letter-spacing: 0.1em;
-}
 .carousel-item h3 {
   font-family: "bonzai";
   font-size: 40px;
@@ -57,15 +52,12 @@ JD SLIDER
 /*=============================================
      MEDIAS QUERYS
 =============================================*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
   .carousel-item h2 {
     font-size: 50px !important;
   }
-  .carousel-item p {
-    font-size: 25px !important;
-  }
   .carousel-item h3 {
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
 }
 
@@ -73,20 +65,15 @@ JD SLIDER
   .carousel-item h2 {
     font-size: 60px !important;
   }
-  .carousel-item p .lead {
-    font-size: 25px !important;
-  }
   .carousel-item h3 {
-    font-size: 20px !important;
+    font-size: 28px !important;
   }
 }
 @media screen and (max-width: 768px) {
   .carousel-item h2 {
     font-size: 130px !important;
   }
-  .carousel-item p {
-    font-size: 40px !important;
-  }
+
   .carousel-item h3 {
     font-size: 30px;
   }
@@ -95,10 +82,8 @@ JD SLIDER
   .carousel-item h2 {
     font-size: 150px;
   }
-  .carousel-item p {
-    font-size: 40px;
-  }
+
   .carousel-item h3 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
