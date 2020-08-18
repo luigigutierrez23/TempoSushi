@@ -1,0 +1,99 @@
+[{
+  "_id": "ObjectId(\"5f1aba3b58c08403385c817d\")",
+  "image": "5497.jpg",
+  "title": "Sake maki",
+  "description": "Envuelto en el alga con salmón fresco.",
+  "category": "rolls",
+  "price": "420",
+  "__v": "0"
+},{
+  "_id": "ObjectId(\"5f1abc4358c08403385c817f\")",
+  "image": "4934.jpg",
+  "title": "Ocean Combo (48 piezas)",
+  "description": "8 u Temptation, 8 u eby furaii, 8 u California, , 4 nigris de salmón, 8 u Sake maki, 8 Buenos Aires roll, 4 futurama roll",
+  "category": "promociones",
+  "price": "2300",
+  "__v": "0"
+},{
+  "_id": "ObjectId(\"5f1abcf158c08403385c8180\")",
+  "image": "7530.jpg",
+  "title": "Tokio Combo (32 piezas)",
+  "description": "8 u Sake maki, 4 u California, 4 u Temptation, 8 u Philadelphia, 4 u Buenos Aires roll",
+  "category": "promociones",
+  "price": "1600",
+  "__v": "0"
+},{
+  "_id": "ObjectId(\"5f295ee8756d221a3426e48c\")",
+  "image": "8570.jpg",
+  "title": "Okinawa Coimbo(16 piezas)",
+  "description": "4 u Sake maki, 4 u California roll, 2 u niguiris de salmon, 4 u Buenos Aires roll",
+  "category": "promociones",
+  "price": "800",
+  "__v": "0"
+},{
+  "_id": "ObjectId(\"5f2967bc756d221a3426e48d\")",
+  "image": "2268.jpg",
+  "title": "Buenos Aires roll ",
+  "description": "Salmón fresco, langostino, palta, queso y semillas de sésamo misto tostadas",
+  "category": "rolls",
+  "price": "420",
+  "__v": "0"
+},{
+  "_id": "ObjectId(\"5f2d2ed209dceb00e82141aa\")",
+  "image": "7045.png",
+  "title": "Empanaditas Primavera",
+  "description": "2u Carne/ Vegetarianas",
+  "category": "entradas",
+  "price": "140",
+  "__v": "0"
+},{
+  "_id": {
+    "$oid": "5f353b17e4ca750cc4e45c0e"
+  },
+  "image": "3569.jpg",
+  "title": "Futurama Roll",
+  "description": "Langostinos rebosados, queso cubierto con frutilla, acompañado de salsa futurama(miel mostaza)",
+  "category": "rolls",
+  "price": 450,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f354793e4ca750cc4e45c0f"
+  },
+  "image": "8788.jpg",
+  "title": "Citrus Roll",
+  "description": "Langostinos rebosados, queso cubierto con frutilla, acompañado de salsa futurama(miel mostaza)",
+  "category": "rolls",
+  "price": 450,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f3672728f0c5c0c8cca2a3c"
+  },
+  "image": "9461.jpg",
+  "title": "Temaki de salmon",
+  "description": "Arroz y salmón envuelto en laminas de nori.",
+  "category": "temakis",
+  "price": 450,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f3685188f0c5c0c8cca2a42"
+  },
+  "image": "4467.jpg",
+  "title": "Coca-Cola",
+  "description": "Cola-Cola Común de 1.5 lts",
+  "category": "bebidas",
+  "price": 170,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f36872b8f0c5c0c8cca2a43"
+  },
+  "image": "252.jpg",
+  "title": "Ensalada Cirashi Bolw",
+  "description": "(Salmon/Langostino/Veggie) Arroz, palta, queso, lluvia de sesamo mixto, nori en laminas",
+  "category": "sushi-salad",
+  "price": 500,
+  "__v": 0
+}]
