@@ -181,4 +181,13 @@ form .btn:hover {
     font-size: 16px;
     width: 37px;
   }
+  input {
+    font-size: 16px;
+  }
+  label {
+    font-size: 16px;
+  }
+  form .btn {
+    font-size: 16px;
+  }
 }
